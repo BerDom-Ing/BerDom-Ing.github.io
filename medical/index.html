@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bernardo Dominguez — Medical Imaging Software Engineer</title>
+<meta name="description" content="Medical imaging software engineer: 3D Slicer, VTK/ITK, 2D/3D registration, surgical planning and navigation, deep-learning segmentation. EU citizen, open to relocation.">
+<meta property="og:title" content="Bernardo Dominguez — Medical Imaging Software Engineer">
+<meta property="og:description" content="From DICOM to the operating room: surgical planning, intra-op 2D/3D registration, deep-learning segmentation in 3D Slicer.">
+<meta property="og:image" content="https://berdom-ing.github.io/medical/media/og.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#040a13">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23040a13'/%3E%3Cpath d='M16 6v20M6 16h20' stroke='%235ee7f9' stroke-width='2.4'/%3E%3Ccircle cx='16' cy='16' r='6.5' fill='none' stroke='%2334d399' stroke-width='1.6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="med.css">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a class="brand" href="#top"><span class="pulse"></span>Bernardo Dominguez</a>
+  <ul>
+    <li><a href="#registration">2D/3D registration</a></li>
+    <li><a href="#spineps">SlicerSPINEPS</a></li>
+    <li><a href="#navigation">Planning &amp; navigation</a></li>
+    <li><a href="#telemetry">Telemetry</a></li>
+    <li><a href="#experience">Experience</a></li>
+  </ul>
+  <div class="right">
+    <a class="btn-sm ghost" href="../">Creative / AI work ↗</a>
+    <a class="btn-sm" href="../cv/Bernardo-Dominguez-CV-Medical-Imaging.pdf" target="_blank" rel="noopener">CV ↓</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Medical imaging software engineer</div>
+        <h1>From DICOM<br>to the <em>operating room.</em></h1>
+        <p class="lede">I build the software between the scanner and the surgeon: <b>segmentation, surgical planning, image-guided navigation and intra-operative 2D/3D registration</b>, in 3D Slicer, VTK/ITK and PyTorch. Shipped in a commercial product and in open source.</p>
+        <div class="cta">
+          <a class="btn primary" href="#registration">See the work ↓</a>
+          <a class="btn" href="../cv/Bernardo-Dominguez-CV-Medical-Imaging.pdf" target="_blank" rel="noopener">Download CV</a>
+          <a class="btn" href="https://github.com/BerDom-Ing" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+        <div class="chips">
+          <span class="chip ok">● Available</span>
+          <span class="chip">EU citizen</span>
+          <span class="chip">Open to relocate: UK · Australia · CH · EU</span>
+          <span class="chip">Remote / hybrid</span>
+        </div>
+      </div>
+      <div class="viewer tall">
+        <span class="corner a"></span><span class="corner b"></span><span class="corner c"></span><span class="corner d"></span>
+        <div class="ov tl"><span class="c">SlicerSPINEPS</span> · T2w SAG MRI<br>T11 – S1 · 8 vertebrae · 7 IVD<br>spinal canal + cord</div>
+        <div class="ov tr">3D surface · RAS<br>mm · VTK → glTF</div>
+        <div class="ov bl">public data · SPIDER<br><span class="g">segmented with my extension</span></div>
+        <div class="hint">DRAG TO ROTATE</div>
+        <model-viewer src="media/models/spine.glb" poster="media/spine.webp" alt="Lumbar spine segmented per vertebra by SlicerSPINEPS, interactive 3D model"
+          camera-controls auto-rotate auto-rotate-delay="0" rotation-per-second="18deg" interaction-prompt="none"
+          camera-orbit="160deg 84deg 0.78m" max-camera-orbit="auto auto 2m" min-camera-orbit="auto auto 0.25m" field-of-view="30deg" exposure="0.95" shadow-intensity="0" tone-mapping="aces"
+          environment-image="legacy" touch-action="pan-y" loading="eager"></model-viewer>
+      </div>
+    </div>
+
+    <div class="stats rv">
+      <div class="stat"><b>Shipping</b><span>in a commercial surgical planning &amp; navigation product</span></div>
+      <div class="stat"><b>&lt; 1 <span class="u">mm</span></b><span>2D/3D registration demo, from a 23 mm start</span></div>
+      <div class="stat"><b>4 <span class="u">PRs</span></b><span>merged in Slicer/SlicerTelemetry, top contributor</span></div>
+      <div class="stat"><b>Kitware</b><span>hosts the telemetry platform I designed</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 01 REGISTRATION ============ -->
+<section class="block" id="registration">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-num">01<small>intra-op imaging</small></div>
+      <div>
+        <h2>Fluoroscopy-to-CT registration</h2>
+        <p>Aligning a live C-arm X-ray with the pre-operative CT, so the surgical plan can be overlaid on the patient. I lead the design and development of this workflow for a commercial surgical navigation product.</p>
+        <span class="nda">⚠ Client work under NDA — the demo below is an independent re-implementation on public data. No client code or images.</span>
+      </div>
+    </div>
+
+    <div class="media rv">
+      <video src="media/registration.mp4" poster="media/registration.webp" muted loop playsinline preload="none" data-auto></video>
+    </div>
+    <p class="cap rv"><b>6-DOF intensity-based 2D/3D registration.</b> Left: simulated intra-op fluoroscopy with the edges of the current DRR in cyan. Middle: DRR rendered from the pre-op CT. Differentiable ray-casting in PyTorch on the GPU, NCC + gradient-NCC similarity, multi-resolution Adam.</p>
+
+    <div class="metrics rv">
+      <div><b class="w">23.2 mm · 9.7°</b><span>initial misalignment</span></div>
+      <div><b>0.68 mm · 0.21°</b><span>final error vs. ground truth</span></div>
+      <div><b>170</b><span>iterations, 128 → 192 px pyramid</span></div>
+    </div>
+
+    <div class="grid2" style="margin-top:26px">
+      <div class="card rv">
+        <span class="tag">What I do in the product (generic, NDA-safe)</span>
+        <ul>
+          <li><b>C-arm calibration and image distortion correction</b>, validated on real device data</li>
+          <li><b>Live video capture</b> from the imaging device into the planning scene</li>
+          <li><b>GPU-accelerated simulated X-ray (DRR) rendering</b> in PyTorch for manual, landmark-based and automatic matching</li>
+          <li>A <b>simulated imaging device + automated test suite</b> so the full workflow is validated offline before every hardware session</li>
+          <li>Technical proposal, lab protocol and open-issues tracking written for the client</li>
+        </ul>
+        <div class="stack"><span>Python</span><span>PyTorch / CUDA</span><span>3D Slicer</span><span>VTK</span><span>ITK</span><span>OpenCV</span><span>pytest</span></div>
+      </div>
+      <div>
+        <div class="media rv">
+          <video src="media/drr-sweep.mp4" poster="media/drr-sweep.webp" muted loop playsinline preload="none" data-auto></video>
+        </div>
+        <p class="cap rv"><b>Perspective DRR sweep</b> — a virtual C-arm orbiting a public head CT (3D Slicer sample data).</p>
+      </div>
+    </div>
+
+    <div class="diagram rv" style="margin-top:22px" aria-label="Registration pipeline diagram">
+      <svg viewBox="0 0 960 230" role="img" aria-labelledby="d1t"><title id="d1t">2D/3D registration pipeline</title>
+        <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5ee7f9"/></marker></defs>
+        <g font-size="12.5" fill="#e6eef7">
+          <rect x="10" y="20" width="160" height="62" rx="8" fill="#0f1e31" stroke="#5ee7f9" stroke-opacity=".5"/>
+          <text x="90" y="46" text-anchor="middle">Pre-op CT</text><text x="90" y="65" text-anchor="middle" fill="#93a4b8" font-size="11">DICOM → volume</text>
+          <rect x="230" y="20" width="190" height="62" rx="8" fill="#0f1e31" stroke="#5ee7f9" stroke-opacity=".5"/>
+          <text x="325" y="46" text-anchor="middle">DRR renderer</text><text x="325" y="65" text-anchor="middle" fill="#93a4b8" font-size="11">ray casting · GPU · pose θ</text>
+          <rect x="10" y="148" width="160" height="62" rx="8" fill="#0f1e31" stroke="#fbbf24" stroke-opacity=".55"/>
+          <text x="90" y="174" text-anchor="middle">C-arm video</text><text x="90" y="193" text-anchor="middle" fill="#93a4b8" font-size="11">live capture</text>
+          <rect x="230" y="148" width="190" height="62" rx="8" fill="#0f1e31" stroke="#fbbf24" stroke-opacity=".55"/>
+          <text x="325" y="174" text-anchor="middle">Calibration</text><text x="325" y="193" text-anchor="middle" fill="#93a4b8" font-size="11">intrinsics · distortion</text>
+          <rect x="480" y="84" width="170" height="62" rx="8" fill="#0f1e31" stroke="#34d399" stroke-opacity=".6"/>
+          <text x="565" y="110" text-anchor="middle">Similarity</text><text x="565" y="129" text-anchor="middle" fill="#93a4b8" font-size="11">NCC · gradient · landmarks</text>
+          <rect x="710" y="84" width="110" height="62" rx="8" fill="#0f1e31" stroke="#34d399" stroke-opacity=".6"/>
+          <text x="765" y="110" text-anchor="middle">Optimizer</text><text x="765" y="129" text-anchor="middle" fill="#93a4b8" font-size="11">6-DOF</text>
+          <rect x="850" y="84" width="100" height="62" rx="8" fill="#0b2a2a" stroke="#34d399"/>
+          <text x="900" y="110" text-anchor="middle">Pose</text><text x="900" y="129" text-anchor="middle" fill="#93a4b8" font-size="11">→ nav scene</text>
+        </g>
+        <g stroke="#5ee7f9" stroke-width="1.4" fill="none" marker-end="url(#ar)">
+          <path d="M170 51H228"/><path d="M170 179H228"/>
+          <path d="M420 51C455 51 450 100 478 106"/><path d="M420 179C455 179 450 130 478 124"/>
+          <path d="M650 115H708"/><path d="M820 115H848"/>
+          <path d="M765 84C765 2 330 2 325 18" stroke-dasharray="4 4"/>
+        </g>
+        <text x="545" y="14" font-size="11" fill="#5f7186" text-anchor="middle">update θ, re-render</text>
+        <rect x="480" y="176" width="340" height="38" rx="8" fill="none" stroke="#5f7186" stroke-dasharray="4 4"/>
+        <text x="650" y="200" font-size="11.5" fill="#93a4b8" text-anchor="middle">simulated device + automated tests → validated offline</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 SPINEPS ============ -->
+<section class="block alt" id="spineps">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-num">02<small>open source · deep learning</small></div>
+      <div>
+        <h2>SlicerSPINEPS</h2>
+        <p>A 3D Slicer extension I wrote and maintain: whole-spine segmentation of MRI and CT with the SPINEPS deep-learning pipeline, producing per-vertebra instance labels and anatomical subregions directly in the Slicer scene. One button installs its own PyTorch stack.</p>
+      </div>
+    </div>
+    <div class="grid2 nl">
+      <div>
+        <div class="media rv">
+          <video src="media/spineps-mri.mp4" poster="media/spineps-mri.webp" muted loop playsinline preload="none" data-auto></video>
+        </div>
+        <p class="cap rv"><b>Output on a public lumbar MRI</b> (SPIDER dataset): T11–S1 labelled automatically, discs in cyan, scrolled through the sagittal slices.</p>
+      </div>
+      <div class="card rv">
+        <span class="tag">Sole author &amp; maintainer</span>
+        <ul>
+          <li>Wraps <b>SPINEPS (nnU-Net v2)</b> for T2w, T1w, Vibe MRI and CT; loads vertebra instances and subregion masks as Slicer segmentations</li>
+          <li><b>One-button dependency installer</b>: reuses an existing PyTorch or picks the CUDA wheel that matches the NVIDIA driver — no admin rights, no restart</li>
+          <li><b>Non-blocking inference</b> in a child process with live logs and cancel; fixes for Windows encodings and SPINEPS 2.1 CLI changes</li>
+          <li>Pairs the right instance/labeling models per modality, so CT never silently runs MRI weights</li>
+          <li>Submitted to the official <b>Slicer Extensions Index</b> (PR #2392)</li>
+        </ul>
+        <div class="stack"><span>Python</span><span>Qt</span><span>MRML</span><span>nnU-Net v2</span><span>PyTorch</span><span>CMake</span></div>
+        <div class="links">
+          <a href="https://github.com/BerDom-Ing/SlicerSPINEPS" target="_blank" rel="noopener">Source on GitHub ↗</a>
+          <a href="https://github.com/Slicer/ExtensionsIndex/pull/2392" target="_blank" rel="noopener">Extensions Index PR ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="media rv" style="margin-top:22px">
+      <img src="media/slicer-ui.webp" alt="SlicerSPINEPS module in 3D Slicer: per-vertebra labels in the 3D view and in axial, coronal and sagittal slices" loading="lazy" width="1917" height="842">
+    </div>
+    <p class="cap rv"><b>The module in 3D Slicer</b> — settings and live log on the left, labelled vertebrae in 3D and in the three slice views.</p>
+  </div>
+</section>
+
+<!-- ============ 03 NAVIGATION ============ -->
+<section class="block" id="navigation">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-num">03<small>commercial · ongoing</small></div>
+      <div>
+        <h2>Surgical planning &amp; navigation</h2>
+        <p>Maintaining and extending a commercial 3D Slicer–based product: a multi-module Python / C++ codebase that goes from the CT scan to a 3D-printable surgical guide, and then tracks instruments in real time during surgery.</p>
+        <span class="nda">⚠ Under NDA — no client names, images or code. The bone model is from a public sample CT.</span>
+      </div>
+    </div>
+    <div class="grid2 even">
+      <div class="viewer sq rv">
+        <span class="corner a"></span><span class="corner b"></span><span class="corner c"></span><span class="corner d"></span>
+        <div class="ov tl"><span class="c">CT → bone surface</span><br>threshold · connectivity<br>smoothing · decimation</div>
+        <div class="ov br">public sample CT<br>260k → glTF + Draco</div>
+        <model-viewer src="media/models/bone.glb" poster="media/skull.webp" alt="Skull and mandible surface segmented from a public CT, interactive 3D model"
+          camera-controls auto-rotate rotation-per-second="14deg" interaction-prompt="none" camera-orbit="210deg 80deg 0.46m" max-camera-orbit="auto auto 1.5m" min-camera-orbit="auto auto 0.15m"
+          field-of-view="30deg" exposure="0.85" tone-mapping="aces" environment-image="legacy" touch-action="pan-y" loading="lazy"></model-viewer>
+      </div>
+      <div class="card rv">
+        <span class="tag">Scope</span>
+        <ul>
+          <li><b>CT processing and bone segmentation</b>, interactive 3D planning and <b>3D-printable surgical guide</b> generation (VTK, ITK / SimpleITK, PySide2)</li>
+          <li><b>Real-time multi-tracker navigation</b> over OpenIGTLink / PLUS, with kinematic transform chains and MRML scene management</li>
+          <li><b>Patient registration</b>: fiducial-based and ICP surface registration</li>
+          <li>Full-stack delivery of client-requested features across modules, with tests</li>
+        </ul>
+        <div class="stack"><span>3D Slicer</span><span>Python</span><span>C++</span><span>VTK</span><span>ITK</span><span>OpenIGTLink</span><span>PLUS</span><span>PySide2</span></div>
+      </div>
+    </div>
+
+    <div class="diagram rv" style="margin-top:22px" aria-label="Navigation system diagram">
+      <svg viewBox="0 0 960 250" role="img" aria-labelledby="d2t"><title id="d2t">Planning and navigation data flow</title>
+        <defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5ee7f9"/></marker></defs>
+        <text x="10" y="18" font-size="11" fill="#5f7186" letter-spacing="2">PRE-OP PLANNING</text>
+        <text x="10" y="148" font-size="11" fill="#5f7186" letter-spacing="2">INTRA-OP NAVIGATION</text>
+        <g font-size="12.5" fill="#e6eef7">
+          <rect x="10" y="30" width="140" height="56" rx="8" fill="#0f1e31" stroke="#5ee7f9" stroke-opacity=".5"/><text x="80" y="54" text-anchor="middle">CT (DICOM)</text><text x="80" y="72" text-anchor="middle" font-size="11" fill="#93a4b8">import · resample</text>
+          <rect x="190" y="30" width="150" height="56" rx="8" fill="#0f1e31" stroke="#5ee7f9" stroke-opacity=".5"/><text x="265" y="54" text-anchor="middle">Segmentation</text><text x="265" y="72" text-anchor="middle" font-size="11" fill="#93a4b8">bone · models</text>
+          <rect x="380" y="30" width="150" height="56" rx="8" fill="#0f1e31" stroke="#5ee7f9" stroke-opacity=".5"/><text x="455" y="54" text-anchor="middle">3D planning</text><text x="455" y="72" text-anchor="middle" font-size="11" fill="#93a4b8">interactive · MRML</text>
+          <rect x="570" y="30" width="160" height="56" rx="8" fill="#0f1e31" stroke="#5ee7f9" stroke-opacity=".5"/><text x="650" y="54" text-anchor="middle">Surgical guide</text><text x="650" y="72" text-anchor="middle" font-size="11" fill="#93a4b8">booleans → STL → print</text>
+          <rect x="10" y="160" width="140" height="56" rx="8" fill="#0f1e31" stroke="#fbbf24" stroke-opacity=".55"/><text x="80" y="184" text-anchor="middle">Trackers</text><text x="80" y="202" text-anchor="middle" font-size="11" fill="#93a4b8">tools · reference</text>
+          <rect x="190" y="160" width="150" height="56" rx="8" fill="#0f1e31" stroke="#fbbf24" stroke-opacity=".55"/><text x="265" y="184" text-anchor="middle">PLUS server</text><text x="265" y="202" text-anchor="middle" font-size="11" fill="#93a4b8">OpenIGTLink stream</text>
+          <rect x="380" y="160" width="150" height="56" rx="8" fill="#0f1e31" stroke="#fbbf24" stroke-opacity=".55"/><text x="455" y="184" text-anchor="middle">Transform chain</text><text x="455" y="202" text-anchor="middle" font-size="11" fill="#93a4b8">tool → ref → patient</text>
+          <rect x="570" y="160" width="160" height="56" rx="8" fill="#0f1e31" stroke="#34d399" stroke-opacity=".6"/><text x="650" y="184" text-anchor="middle">Registration</text><text x="650" y="202" text-anchor="middle" font-size="11" fill="#93a4b8">fiducials · ICP · 2D/3D</text>
+          <rect x="790" y="94" width="160" height="62" rx="8" fill="#0b2a2a" stroke="#34d399"/><text x="870" y="120" text-anchor="middle">Navigation view</text><text x="870" y="139" text-anchor="middle" font-size="11" fill="#93a4b8">tool tip on the plan</text>
+        </g>
+        <g stroke="#5ee7f9" stroke-width="1.4" fill="none" marker-end="url(#ar2)">
+          <path d="M150 58H188"/><path d="M340 58H378"/><path d="M530 58H568"/>
+          <path d="M150 188H188"/><path d="M340 188H378"/><path d="M530 188H568"/>
+          <path d="M730 58C770 58 760 112 788 118"/><path d="M730 188C770 188 760 136 788 132"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 TELEMETRY ============ -->
+<section class="block alt" id="telemetry">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-num">04<small>research · Queen's University</small></div>
+      <div>
+        <h2>Privacy-first telemetry for 3D Slicer</h2>
+        <p>Designed end-to-end during my research internship at the Laboratory for Percutaneous Surgery (Queen's University, Canada): which Slicer features are actually used, collected only with consent. The platform is now <b>hosted by Kitware</b>, and I am the top contributor to the official Slicer/SlicerTelemetry repository.</p>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="rv">
+        <div class="browser">
+          <div class="bar"><i></i><i></i><i></i><span>slicer-telemetry.kitware.com</span></div>
+          <img src="media/telemetry.webp" alt="Slicer telemetry dashboard: module usage bars, events over time and a world map" loading="lazy" width="1400" height="713">
+        </div>
+        <p class="cap"><b>Live dashboard</b> — module and function usage, time filter and per-country map (D3.js · DC.js · Crossfilter).</p>
+      </div>
+      <div class="card rv">
+        <span class="tag">Owned the full SDLC</span>
+        <ul>
+          <li><b>Slicer extension</b> (Qt): opt-in consent dialog, local batching, “where to send the data” setting</li>
+          <li><b>Flask backend on AWS</b> behind Gunicorn + Nginx</li>
+          <li><b>Interactive dashboard</b> with linked filters and a choropleth world map</li>
+          <li>Requirements, architecture, implementation, tests (unittest + ctest) and release</li>
+          <li><b>4 merged pull requests</b> in the Slicer GitHub organisation</li>
+        </ul>
+        <div class="stack"><span>Python</span><span>Qt</span><span>Flask</span><span>AWS</span><span>Nginx</span><span>D3.js</span><span>ctest</span></div>
+        <div class="links">
+          <a href="https://slicer-telemetry.kitware.com/" target="_blank" rel="noopener">Live dashboard ↗</a>
+          <a href="https://github.com/Slicer/SlicerTelemetry" target="_blank" rel="noopener">Slicer/SlicerTelemetry ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 MORE ============ -->
+<section class="block" id="more">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-num">05<small>full-stack range</small></div>
+      <div>
+        <h2>Beyond imaging</h2>
+        <p>Products I shipped end-to-end — the backend, cloud and UI side that medical software also needs.</p>
+      </div>
+    </div>
+    <div class="grid3">
+      <div class="card rv"><span class="tag">In daily use</span><h3>Short-term rental finance app</h3><p>One Python / Flet codebase shipped as an Android APK and as a web app (Pyodide) on Cloudflare Pages. Supabase backend: PostgreSQL, Auth, Row-Level Security, SQL migrations, pytest.</p></div>
+      <div class="card rv"><span class="tag">Sold to a client</span><h3>Banking desktop system</h3><p>PyQt5 / SQLite ledger with PDF statements, a Streamlit BI dashboard, ESC/POS and ESC/P check printing, and a legacy dBase migration.</p></div>
+      <div class="card rv"><span class="tag">3D · XR</span><h3>Real-time 3D &amp; VR in Godot</h3><p>OpenXR on Meta Quest: controller input, hand interaction, mixed-reality passthrough, 72 Hz tuning — the same skills as surgical simulation. <a href="../#xr" style="color:var(--cyan)">See it ↗</a></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 SKILLS ============ -->
+<section class="block alt" id="skills">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-num">06<small>toolbox</small></div>
+      <div><h2>Stack</h2></div>
+    </div>
+    <div class="skills">
+      <div class="card rv"><span class="tag">Medical imaging</span><p>3D Slicer (extensions, MRML) · VTK · ITK / SimpleITK · DICOM · segmentation · 2D/3D and 3D/3D registration (fiducial, ICP, intensity-based) · C-arm calibration · DRR · OpenIGTLink / PLUS · surgical navigation</p></div>
+      <div class="card rv"><span class="tag">AI &amp; compute</span><p>PyTorch / CUDA · nnU-Net v2 · deep-learning deployment in clinical tools · differentiable rendering · NumPy / SciPy · GPU-aware installers</p></div>
+      <div class="card rv"><span class="tag">Engineering</span><p>Python · C++ (exposure) · Qt / PySide2 · Flask · AWS · Supabase / PostgreSQL · CMake · pytest / unittest / ctest · Git · simulated devices for offline validation</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 EXPERIENCE ============ -->
+<section class="block" id="experience">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-num">07<small>timeline</small></div>
+      <div><h2>Experience</h2></div>
+    </div>
+    <div class="timeline rv">
+      <div class="it now"><div class="when">2024 — present</div><h3>Freelance developer — medical imaging software</h3><p>Commercial 3D Slicer surgical planning and navigation product (NDA): planning, guides, real-time tracking, and the new fluoroscopy-to-CT registration workflow. Author of SlicerSPINEPS. Independent full-stack products.</p></div>
+      <div class="it"><div class="when">Feb — Oct 2024</div><h3>Research software engineer (intern) — Laboratory for Percutaneous Surgery, Queen's University</h3><p>Remote. Designed and built the 3D Slicer telemetry pipeline now hosted by Kitware.</p></div>
+      <div class="it"><div class="when">Education</div><h3>Systems Engineer — Universidad Tecnológica Nacional (UTN), Argentina</h3><p>English: advanced (Cambridge FCE). Spanish: native. Italian: basic.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap rv">
+    <div class="eyebrow" style="justify-content:center">Let's talk</div>
+    <h2 style="margin-top:14px">Building surgical, imaging<br>or medical-AI software?</h2>
+    <p>Italian / EU citizen based in Como, Italy. No sponsorship needed in the EU, EEA or Switzerland; open to relocation to the UK, Australia and beyond.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:ber.dom.engineer@gmail.com">ber.dom.engineer@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/engineer-bernardo-dominguez/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="../cv/Bernardo-Dominguez-CV-Medical-Imaging.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Bernardo Dominguez · <a href="../">Creative &amp; AI portfolio</a></div>
+    <div>No client data, code or screenshots appear on this page. Data: lumbar MRI from the <a href="https://zenodo.org/records/10159290" target="_blank" rel="noopener">SPIDER dataset</a> (CC BY 4.0); head CT from the public 3D Slicer sample data (SlicerIGT). Demos are my own code.</div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', scrollY > 30);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const vo = new IntersectionObserver(es => es.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting) { if (v.preload === 'none') v.preload = 'auto'; if (!reduce) v.play().catch(() => {}); } else v.pause();
+  }), { threshold: .25 });
+  document.querySelectorAll('video[data-auto]').forEach(v => { vo.observe(v); if (reduce) v.controls = true; });
+  if (reduce) document.querySelectorAll('model-viewer[auto-rotate]').forEach(m => m.removeAttribute('auto-rotate'));
+</script>
+</body>
+</html>
