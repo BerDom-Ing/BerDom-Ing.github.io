@@ -1,0 +1,1039 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Name Surname · Psychologist · Clinical psychology</title>
+<meta property="og:title" content="Name Surname · Psychologist">
+<meta property="og:description" content="Clinical psychology. Individual therapy, in person and online.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Psychologist", "name": "Name Surname", "description": "Clinical psychologist. Individual therapy, in person and online.", "email": "consulta@example.com", "telephone": "+34000000000", "address": {"@type": "PostalAddress", "streetAddress": "1 Example Street", "addressLocality": "City", "addressCountry": "ES"}, "knowsLanguage": "en"}</script>
+<meta name="description" content="Clinical psychologist. A professional space to put into words what weighs on you. Book your first session.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap">
+<style>
+/* Layout: una escena fija (sticky) que se recorre con el scroll, luego áreas de trabajo y contacto. Look único, claro, crema pastel. */
+:root{
+  --cream:#F7EFE0;
+  --cream-2:#EFE3CD;
+  --cool:#E9E6DF;
+  --paper:#FFFBF3;
+  --ink:#27302F;
+  --muted:#6C6A60;
+  --man:#34434A;
+  --man-2:#26333A;
+  --woman:#6A5060;
+  --woman-2:#523C4A;
+  --chair:#DCC8AA;
+  --chair-2:#BFA684;
+  --sage:#3E6E66;
+  --sage-2:#2F5952;
+  --sage-soft:#D5E4DA;
+  --blush:#F0CFC2;
+  --thread:#1C1B1A;
+  --line:#E2D3BA;
+  --display:"Newsreader", "Iowan Old Style", Georgia, serif;
+  --body:"Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --header-h:64px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--stage-bg,var(--cream));color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sage);outline-offset:3px;border-radius:6px}
+
+/* ---------- Cabecera ---------- */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--stage-bg,var(--cream))}
+.top{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;height:var(--header-h);
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  background:color-mix(in srgb,var(--stage-bg,var(--cream)) 86%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand svg{flex:none}
+.brand b{font-family:var(--display);font-weight:500;font-size:1.15rem;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand small{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;line-height:1.1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;text-decoration:none;
+  font:600 .95rem/1 var(--body);padding:.85em 1.3em;border-radius:999px;background:var(--sage);color:var(--paper);
+  transition:background .2s,transform .2s}
+.btn:hover{background:var(--sage-2);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--sage-2);box-shadow:inset 0 0 0 1.5px var(--sage)}
+.btn.ghost:hover{background:var(--sage-soft)}
+.top .btn{padding:.7em 1.1em;font-size:.88rem;flex:none}
+
+/* ---------- Historia con scroll ---------- */
+.story{position:relative;height:760vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--stage-bg,var(--cream))}
+.scene{position:absolute;left:0;right:0;top:calc(var(--header-h) + env(safe-area-inset-top,0px));bottom:0;width:100%;height:calc(100% - var(--header-h) - env(safe-area-inset-top,0px));display:block}
+.scene text{font-family:var(--body)}
+.caps{position:absolute;inset:0;pointer-events:none}
+.cap{position:absolute;left:max(24px,env(safe-area-inset-left,0px),calc(50% - 600px));bottom:4.5vh;max-width:min(38rem,calc(100% - 48px));
+  opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.cap.on{opacity:1;transform:none;pointer-events:auto}
+.cap-hero{top:calc(var(--header-h) + env(safe-area-inset-top,0px));bottom:6vh;max-width:min(24rem,36vw);display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-2);margin:0 0 .9rem}
+.cap h1{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,4.6vw,4.4rem);line-height:1.02;letter-spacing:-.025em;margin:0 0 1.1rem;text-wrap:balance}
+.cap h1 em,.cap h2 em{font-style:italic;color:var(--sage-2)}
+.cap h2{font-family:var(--display);font-weight:400;font-size:clamp(1.7rem,3vw,2.6rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 .5rem;text-wrap:balance}
+.cap p{margin:0;color:var(--muted);font-size:1.05rem;max-width:34ch}
+.cap .btn{margin-top:1.1rem}
+.cap-hero .eyebrow{display:flex;align-items:center;gap:14px;font-size:.82rem;letter-spacing:.2em;margin:0 0 1.4rem;white-space:nowrap;max-width:none}
+.cap-hero .eyebrow .rule{width:36px;height:1.5px;background:var(--sage-2);flex:none}
+.lede{font-family:var(--display);font-weight:400;font-size:clamp(1.7rem,2.7vw,2.5rem)!important;line-height:1.12!important;letter-spacing:-.015em;color:var(--ink)!important;max-width:13ch!important;text-wrap:balance}
+.lede em{font-style:italic;color:var(--sage-2)}
+.cue{display:flex;align-items:center;gap:16px;margin-top:2.6rem;color:var(--sage-2);font-size:.78rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase}
+.cue-line{position:relative;display:block;width:1.5px;height:64px;background:color-mix(in srgb,var(--sage) 25%,transparent);border-radius:2px;overflow:hidden;flex:none}
+.cue-line i{position:absolute;left:0;top:-40%;width:100%;height:40%;background:var(--sage-2);border-radius:2px;animation:fall 2s cubic-bezier(.6,0,.3,1) infinite}
+@keyframes fall{0%{top:-40%}100%{top:100%}}
+
+/* Burbujas */
+.bub{opacity:0;transform:scale(.55);transform-box:fill-box;transition:opacity .35s ease,transform .45s cubic-bezier(.2,1.4,.4,1)}
+.bub.on{opacity:1;transform:none}
+.bub-man{transform-origin:100% 0%}
+.bub-woman{transform-origin:0% 100%}
+.bub rect,.bub path{fill:var(--paper);stroke:var(--line);stroke-width:2}
+.bub text{fill:var(--ink);font-size:25px;font-weight:500}
+.dot{fill:var(--woman);transform-box:fill-box;transform-origin:center;animation:hop 1.2s ease-in-out infinite}
+.dot:nth-child(2){animation-delay:.15s}.dot:nth-child(3){animation-delay:.3s}
+@keyframes hop{0%,60%,100%{transform:none;opacity:.45}30%{transform:translateY(-6px);opacity:1}}
+
+/* Retrato (móvil) */
+@media (max-aspect-ratio: 4/5){
+  .stage{display:flex;flex-direction:column}
+  .scene{position:relative;top:auto;height:auto;flex:none;margin-top:calc(var(--header-h) + env(safe-area-inset-top,0px) + 8px)}
+  .caps{position:relative;inset:auto;flex:1;display:grid;padding:8px max(16px,env(safe-area-inset-right,0px)) 24px max(16px,env(safe-area-inset-left,0px))}
+  .cap,.cap-hero{position:relative;grid-area:1/1;left:auto;top:auto;bottom:auto;max-width:34rem;align-self:start}
+  .cap h1{font-size:clamp(2rem,8.6vw,2.8rem)}
+  .cap h2{font-size:clamp(1.5rem,6.4vw,2rem)}
+  .cap p{font-size:1rem}
+  /* Portada en celular: bloque centrado, aviso de scroll abajo */
+  .cap-hero{align-self:stretch;justify-content:flex-start;align-items:center;text-align:center;max-width:none;width:100%;padding-top:4px}
+  .cap-hero .eyebrow{flex-direction:column;gap:10px;margin:auto 0 1.1rem;white-space:normal;letter-spacing:.2em;font-size:.72rem;line-height:1.4}
+  .cap-hero .eyebrow .rule{width:28px}
+  .cap-hero .eb{display:flex;flex-direction:column;align-items:center;gap:4px}
+  .cap-hero .eb-sep{display:none}
+  .cap-hero .eb-2{font-family:var(--display);font-style:italic;font-size:1.05rem;letter-spacing:0;text-transform:none;font-weight:400;color:var(--ink)}
+  .lede{max-width:12ch!important;font-size:clamp(2.1rem,9.4vw,2.7rem)!important;line-height:1.08!important;margin:0 auto!important}
+  .cue{flex-direction:column-reverse;gap:10px;margin-top:auto;padding-top:20px;font-size:.7rem;letter-spacing:.3em;padding-left:.3em}
+  .cue-line{height:40px}
+}
+@media (max-aspect-ratio: 4/5) and (max-height: 720px){
+  .cap-hero .eyebrow{margin-bottom:.7rem;gap:6px}
+  .cap-hero .eyebrow .rule{display:none}
+  .lede{font-size:clamp(1.8rem,8vw,2.2rem)!important}
+  .cue{padding-top:12px;gap:8px}
+  .cue-line{height:26px}
+}
+
+/* ---------- Secciones ---------- */
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+section.band{padding-block:clamp(64px,10vw,120px)}
+.areas{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.areas-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:32px 64px;align-items:end;margin-bottom:48px}
+.areas-head h2,.contact h2{font-family:var(--display);font-weight:400;font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.areas-head p{margin:0;color:var(--muted);font-size:1.08rem;max-width:52ch}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+.area{padding:28px 24px 8px 0;min-width:0}
+.area + .area{padding-left:24px;border-left:1px solid var(--line)}
+.area svg{display:block;margin-bottom:18px}
+.area h3{font-family:var(--display);font-weight:500;font-size:1.35rem;margin:0 0 .4rem;letter-spacing:-.01em}
+.area p{margin:0;color:var(--muted);font-size:.96rem}
+.facts{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:48px;font-size:.95rem;color:var(--muted)}
+.facts span{display:inline-flex;align-items:center;gap:10px}
+.facts span::before{content:"";width:18px;height:2px;background:var(--thread);border-radius:2px}
+
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:start}
+.contact .lead{color:var(--muted);font-size:1.08rem;max-width:44ch;margin:18px 0 32px}
+.phone{display:flex;flex-direction:column;gap:6px;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.phone small{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.phone-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px}
+.phone-num{font-family:var(--display);font-size:clamp(2rem,4.4vw,3rem);letter-spacing:-.01em;line-height:1.1;font-variant-numeric:tabular-nums;user-select:all}
+.copy{border:0;background:var(--cream-2);color:var(--ink);font:600 .85rem/1 var(--body);padding:.6em 1em;border-radius:999px;cursor:pointer}
+.copy:hover{background:var(--line)}
+.details{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 20px;margin:24px 0 0;font-size:.98rem}
+.details dt{color:var(--muted)}
+.details dd{margin:0}
+
+.form{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:clamp(22px,4vw,36px);box-shadow:0 30px 60px -40px rgba(60,45,25,.35)}
+.form h3{font-family:var(--display);font-weight:500;font-size:1.6rem;margin:0 0 4px;letter-spacing:-.01em}
+.form > p{margin:0 0 22px;color:var(--muted);font-size:.95rem}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;min-width:0}
+.field label,.legend{font-size:.85rem;font-weight:600}
+.field input,.field select,.field textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--cream);border:1.5px solid var(--line);border-radius:12px;padding:.75em .9em;width:100%;transition:border-color .2s,background .2s}
+.field textarea{min-height:96px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--sage);background:var(--paper)}
+.field .err{font-size:.82rem;color:#9A3B2E;min-height:0}
+.field.bad input{border-color:#C0614F}
+.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 14px}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg{position:relative}
+.seg input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.seg label{font-weight:500;font-size:.95rem;padding:.6em 1.1em;border-radius:999px;border:1.5px solid var(--line);background:var(--cream);cursor:pointer;transition:all .2s}
+.seg input:checked + label{background:var(--sage);border-color:var(--sage);color:var(--paper)}
+.seg input:focus-visible + label{outline:3px solid var(--sage);outline-offset:2px}
+.form .btn{width:100%;padding:1.05em;font-size:1rem;margin-top:6px}
+.note{font-size:.8rem;color:var(--muted);margin:12px 0 0;text-align:center}
+.done{text-align:left}
+.done .tick{width:52px;height:52px;border-radius:50%;background:var(--sage-soft);display:grid;place-items:center;margin-bottom:14px}
+.done pre{white-space:pre-wrap;font:inherit;font-size:.92rem;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:14px;margin:14px 0;color:var(--ink)}
+.done .acts{display:flex;flex-wrap:wrap;gap:10px}
+.done .acts .btn{width:auto;flex:1 1 auto}
+footer{padding-block:36px 48px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* ---------- Pasada 2: detalles ---------- */
+.eyebrow-s{font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-2);margin:0 0 1rem;display:flex;align-items:center;gap:12px}
+.eyebrow-s::before{content:"";width:28px;height:1.5px;background:var(--sage-2)}
+.h-sec{font-family:var(--display);font-weight:400;font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.h-sec em{font-style:italic;color:var(--sage-2)}
+
+/* Progreso del relato */
+.prog{position:absolute;right:max(22px,env(safe-area-inset-right,0px));top:32%;height:36%;width:2px;border-radius:2px;background:color-mix(in srgb,var(--ink) 10%,transparent);pointer-events:none}
+.prog i{position:absolute;inset:0;background:var(--sage-2);border-radius:2px;transform-origin:top;transform:scaleY(0)}
+.prog b{position:absolute;left:50%;width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%;background:var(--stage-bg,var(--cream));border:1.5px solid color-mix(in srgb,var(--ink) 25%,transparent);transition:background .3s,border-color .3s}
+.prog b.on{background:var(--sage-2);border-color:var(--sage-2)}
+@media (max-aspect-ratio: 4/5){.prog{display:none}}
+
+/* Sobre mí */
+.about-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.1fr);gap:clamp(32px,6vw,88px);align-items:center}
+.about-head{margin-bottom:22px}
+.portrait{margin:0;position:relative;max-width:440px;width:100%;justify-self:center;isolation:isolate}
+.portrait img,.portrait>svg{display:block;width:100%;height:auto;aspect-ratio:657/812;object-fit:cover;border-radius:999px 999px 20px 20px}
+.portrait::after{content:"";position:absolute;inset:16px -16px -16px 16px;border:1.5px solid var(--sage);border-radius:999px 999px 20px 20px;z-index:-1;opacity:.5}
+.phone-line{display:grid;gap:4px;padding:12px 0}
+.phone-line + .phone-line{border-top:1px dashed var(--line)}
+.pl-label{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-2)}
+.pl-label em{font-style:normal;text-transform:none;letter-spacing:0;color:var(--muted);font-weight:400;font-size:.9rem}
+.phone .phone-num{font-size:clamp(1.7rem,3.4vw,2.3rem)}
+.seg input:disabled + label{opacity:.4;cursor:not-allowed}
+.hint-s{font-size:.82rem;color:var(--muted);min-height:0}
+.about-txt .bio{font-size:1.15rem;line-height:1.65;color:var(--ink);max-width:54ch;margin:6px 0 26px}
+.creds{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.creds li{display:flex;gap:14px;align-items:baseline;color:var(--muted);font-size:.98rem}
+.creds li::before{content:"";flex:none;width:16px;height:2px;background:var(--thread);border-radius:2px;transform:translateY(-4px)}
+.sign{font-family:var(--display);font-style:italic;font-size:1.6rem;color:var(--sage-2);margin-top:26px}
+
+/* Cómo empezamos */
+.process{background:var(--sage-2);color:var(--paper)}
+.process .eyebrow-s{color:var(--sage-soft)}
+.process .eyebrow-s::before{background:var(--sage-soft)}
+.process .h-sec em{color:var(--blush)}
+.steps{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;position:relative;--draw:0}
+.steps::before,.steps::after{content:"";position:absolute;left:24px;right:calc(33.333% - 24px);top:23px;height:2px;border-radius:2px;background:color-mix(in srgb,var(--paper) 22%,transparent)}
+.steps::after{background:var(--blush);transform-origin:left;transform:scaleX(var(--draw))}
+.steps li{position:relative;z-index:1;min-width:0}
+.steps .n{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--sage-2);border:2px solid var(--blush);font-family:var(--display);font-size:1.3rem;color:var(--paper);margin-bottom:22px}
+.steps h3{font-family:var(--display);font-weight:500;font-size:1.5rem;margin:0 0 .5rem}
+.steps p{margin:0;color:color-mix(in srgb,var(--paper) 78%,transparent);max-width:32ch}
+
+/* Preguntas */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,6vw,80px);align-items:start}
+.faq-grid .lead{color:var(--muted);margin:18px 0 0;font-size:1.05rem}
+.qa details{border-bottom:1px solid var(--line)}
+.qa details:first-child{border-top:1px solid var(--line)}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 2px;font-family:var(--display);font-size:1.28rem;line-height:1.25}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"";flex:none;width:28px;height:28px;border-radius:50%;background:var(--cream-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpath d='M9 14h10M14 9v10' stroke='%233E6E66' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/100% no-repeat;transition:transform .3s}
+.qa details[open] summary::after{transform:rotate(45deg)}
+.qa summary:hover{color:var(--sage-2)}
+.qa details p{margin:0;padding:0 44px 22px 2px;color:var(--muted);max-width:60ch}
+.qa details[open] p{animation:fadeIn .35s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+
+/* Días */
+.days{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 8px;scroll-snap-type:x proximity;scrollbar-width:thin}
+.days input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.days label{flex:none;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:62px;padding:.55em .7em;border-radius:14px;border:1.5px solid var(--line);background:var(--cream);cursor:pointer;line-height:1.1;transition:all .2s;font-weight:500}
+.days label small{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.days label b{font-family:var(--display);font-weight:500;font-size:1.35rem}
+.days label.any b{font-size:1rem;font-family:var(--body)}
+.days input:checked + label{background:var(--sage);border-color:var(--sage);color:var(--paper)}
+.days input:checked + label small{color:var(--sage-soft)}
+.days input:focus-visible + label{outline:3px solid var(--sage);outline-offset:2px}
+
+/* Botón flotante */
+.fab{position:fixed;right:max(18px,calc(env(safe-area-inset-right,0px) + 18px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:25;display:inline-flex;align-items:center;gap:10px;padding:.85em 1.2em .85em 1em;border-radius:999px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;font-size:.92rem;box-shadow:0 14px 30px -12px rgba(30,25,20,.45);transform:translateY(140%);opacity:0;transition:transform .45s cubic-bezier(.2,1.2,.4,1),opacity .3s}
+.fab.on{transform:none;opacity:1}
+.fab:hover{background:var(--sage-2)}
+
+/* Aparición suave */
+.rv{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+html.rv-on .rv:not(.in){opacity:.25;transform:translateY(22px)}
+.area svg path,.area svg circle{transition:transform .5s cubic-bezier(.2,1.4,.4,1);transform-origin:center;transform-box:fill-box}
+.area:hover svg path,.area:hover svg circle{transform:scaleX(1.12)}
+
+footer .links{display:flex;gap:18px;flex-wrap:wrap}
+footer .links a{text-decoration:none}
+footer .links a:hover{color:var(--sage-2)}
+
+@media (max-width:900px){
+  .about-grid,.faq-grid{grid-template-columns:minmax(0,1fr)}
+  .portrait{max-width:320px}
+  .steps{grid-template-columns:minmax(0,1fr);gap:28px}
+  .steps::before,.steps::after{left:23px;right:auto;top:24px;bottom:24px;width:2px;height:auto}
+  .steps::after{transform-origin:top;transform:scaleY(var(--draw))}
+  .steps li{padding-left:72px}
+  .steps .n{position:absolute;left:0;top:0;margin:0}
+  .steps h3{padding-top:8px}
+}
+@media (prefers-reduced-motion: reduce){
+  .fab,.rv{transition:none}
+  html.rv-on .rv:not(.in){opacity:1;transform:none}
+  .steps{--draw:1!important}
+}
+
+@media (max-width:900px){
+  .areas-head,.contact{grid-template-columns:minmax(0,1fr)}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .area:nth-child(3){padding-left:0;border-left:0}
+  .area:nth-child(n+3){border-top:1px solid var(--line);margin-top:20px}
+}
+@media (max-width:520px){
+  .grid4{grid-template-columns:minmax(0,1fr)}
+  .area,.area + .area{padding-left:0;border-left:0}
+  .area + .area{border-top:1px solid var(--line);margin-top:8px}
+  .row2{grid-template-columns:minmax(0,1fr)}
+  .brand small{display:none}
+  .top .btn{padding:.65em .9em}
+  .story{height:640vh}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .cap,.bub{transition:none}
+  .dot,.cue-line i{animation:none}
+  .cue-line i{top:0;height:100%}
+}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <a class="brand" href="#inicio" aria-label="Home">
+    <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="var(--sage)"/><path d="M8 19c3-6 6 2 9-3s5-4 9 1" fill="none" stroke="var(--paper)" stroke-width="2.2" stroke-linecap="round"/></svg>
+    <span><b data-cfg="name">Name Surname</b><small data-cfg="title">Psychologist · Clinical psychology</small></span>
+  </a>
+  <a class="btn" href="#contacto">Book now</a>
+</header>
+
+<main id="inicio">
+<div class="story" id="story">
+  <div class="stage">
+    <svg class="scene" id="scene" viewBox="0 -40 1200 1010" preserveAspectRatio="xMidYMid meet" role="img" aria-label="A seated man thinks about a tangled thread. A psychologist sits down in front of him and listens. As he talks, the knot comes loose and disappears.">
+      <defs>
+        <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#FFE7B8" stop-opacity=".95"/>
+          <stop offset="1" stop-color="#FFE7B8" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="soft" x="-20%" y="-20%" width="140%" height="160%">
+          <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#5A4426" flood-opacity=".12"/>
+        </filter>
+      </defs>
+
+      <!-- Habitación -->
+      <ellipse id="lampGlow" cx="1070" cy="300" rx="220" ry="220" fill="url(#glow)" opacity=".35"/>
+      <clipPath id="winClip"><path d="M424 264 V168 A64 64 0 0 1 552 168 V264 Z"/></clipPath>
+      <g id="window" transform="translate(-140 0)">
+        <g clip-path="url(#winClip)">
+          <rect id="winSky" x="420" y="96" width="140" height="172" fill="#C6CACA"/>
+          <circle id="winSun" cx="512" cy="300" r="24" fill="#F2B487" opacity="0"/>
+          <path d="M420 246 Q452 230 482 242 T560 236 V270 H420Z" fill="#B7C8B6" opacity=".85"/>
+          <g id="rain"></g>
+        </g>
+        <path d="M424 264 V168 A64 64 0 0 1 552 168 V264 Z" fill="none" stroke="var(--chair-2)" stroke-width="6"/>
+        <line x1="488" y1="104" x2="488" y2="264" stroke="var(--chair-2)" stroke-width="4"/>
+        <line x1="424" y1="198" x2="552" y2="198" stroke="var(--chair-2)" stroke-width="4"/>
+        <rect x="410" y="262" width="156" height="10" rx="4" fill="var(--chair)"/>
+      </g>
+      <g id="motes" opacity="0"></g>
+      <line id="floor" x1="620" y1="702" x2="1160" y2="702" stroke="var(--line)" stroke-width="3" stroke-linecap="round"/>
+      <ellipse id="rug" cx="880" cy="712" rx="210" ry="22" fill="var(--blush)" opacity=".55"/>
+      <g id="lamp">
+        <line x1="1070" y1="300" x2="1070" y2="700" stroke="var(--chair-2)" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="1070" cy="700" rx="38" ry="7" fill="var(--chair-2)"/>
+        <path d="M1028 300 L1112 300 L1096 248 L1044 248 Z" fill="var(--paper)" stroke="var(--chair)" stroke-width="3" stroke-linejoin="round"/>
+      </g>
+
+      <!-- Mujer (entra desde la izquierda) -->
+      <g id="woman" transform="translate(-1100 0)">
+        <g id="plant">
+          <path d="M556 560 C540 520 548 488 566 470 C574 500 572 534 556 560Z" fill="var(--sage)" opacity=".9"/>
+          <path d="M562 566 C590 530 616 520 640 522 C622 548 596 566 562 566Z" fill="var(--sage-2)" opacity=".85"/>
+          <path d="M558 570 C526 548 512 530 508 506 C532 512 552 534 558 570Z" fill="var(--sage)" opacity=".75"/>
+          <path d="M562 562 C568 520 590 494 612 486 C608 516 590 544 562 562Z" fill="var(--sage)" opacity=".7"/>
+          <path d="M532 600 L592 600 L584 700 L540 700 Z" fill="var(--chair-2)"/>
+          <rect x="528" y="592" width="68" height="14" rx="5" fill="var(--chair)"/>
+        </g>
+        <!-- silla -->
+        <rect x="226" y="402" width="62" height="238" rx="28" fill="var(--chair)"/>
+        <rect x="236" y="566" width="180" height="46" rx="18" fill="var(--chair)"/>
+        <line x1="258" y1="610" x2="252" y2="700" stroke="var(--chair-2)" stroke-width="9" stroke-linecap="round"/>
+        <line x1="398" y1="610" x2="404" y2="700" stroke="var(--chair-2)" stroke-width="9" stroke-linecap="round"/>
+        <!-- cuerpo -->
+        <g fill="var(--woman)" stroke="var(--woman)" stroke-linecap="round">
+          <line x1="300" y1="550" x2="408" y2="558" stroke-width="44"/>
+          <line x1="408" y1="558" x2="400" y2="684" stroke-width="32"/>
+          <path d="M386 678 L388 702 L444 702 Q448 690 430 682 Z" stroke-width="2" stroke-linejoin="round"/>
+          <line x1="300" y1="536" x2="420" y2="530" stroke-width="44" stroke="var(--woman-2)"/>
+          <line x1="420" y1="530" x2="466" y2="626" stroke-width="30" stroke="var(--woman-2)"/>
+          <ellipse cx="476" cy="640" rx="22" ry="10" transform="rotate(52 476 640)" fill="var(--woman-2)" stroke="none"/>
+          <path d="M292 422 C296 398 352 396 358 422 L364 540 C344 558 304 558 288 544 Z" stroke-width="2" stroke-linejoin="round"/>
+          <g id="wHead">
+          <line x1="326" y1="384" x2="325" y2="414" stroke-width="24"/>
+          <circle cx="330" cy="362" r="33" stroke="none"/>
+          <circle cx="298" cy="338" r="17" fill="var(--woman-2)" stroke="none"/>
+          <path d="M297 366 Q294 326 332 327 Q360 328 364 352 Q346 340 326 346 Q308 352 307 376 Z" fill="var(--woman-2)" stroke="none"/>
+          </g>
+          <line x1="334" y1="430" x2="352" y2="500" stroke-width="24"/>
+          <line x1="352" y1="500" x2="406" y2="504" stroke-width="21"/>
+        </g>
+        <g transform="rotate(-14 428 492)">
+          <rect x="396" y="486" width="66" height="10" rx="2" fill="var(--paper)" stroke="var(--chair-2)" stroke-width="2"/>
+          <line id="pen" x1="430" y1="482" x2="456" y2="466" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        <circle cx="408" cy="503" r="11" fill="var(--woman)"/>
+        <!-- burbuja "..." -->
+        <g id="wBub" class="bub bub-woman">
+          <path d="M366 330 L356 352 L388 334 Z" stroke-linejoin="round"/>
+          <rect x="362" y="276" width="124" height="58" rx="29"/>
+          <path d="M370 331 L389 331" stroke="var(--paper)" stroke-width="4"/>
+          <g><circle class="dot" cx="400" cy="305" r="6"/><circle class="dot" cx="424" cy="305" r="6"/><circle class="dot" cx="448" cy="305" r="6"/></g>
+        </g>
+      </g>
+
+      <!-- Hombre -->
+      <g id="man">
+        <rect x="900" y="392" width="74" height="252" rx="32" fill="var(--chair)"/>
+        <rect x="804" y="514" width="168" height="30" rx="15" fill="var(--chair-2)" opacity=".55"/>
+        <rect x="784" y="564" width="192" height="52" rx="18" fill="var(--chair)"/>
+        <line x1="800" y1="614" x2="795" y2="700" stroke="var(--chair-2)" stroke-width="9" stroke-linecap="round"/>
+        <line x1="960" y1="614" x2="966" y2="700" stroke="var(--chair-2)" stroke-width="9" stroke-linecap="round"/>
+        <g fill="var(--man)" stroke="var(--man)" stroke-linecap="round">
+          <line x1="890" y1="546" x2="776" y2="556" stroke-width="50" stroke="var(--man-2)"/>
+          <line x1="776" y1="556" x2="786" y2="684" stroke-width="38" stroke="var(--man-2)"/>
+          <path d="M802 676 Q808 702 800 702 L744 702 Q738 690 756 683 Z" stroke-width="2" stroke-linejoin="round" fill="var(--man-2)" stroke="var(--man-2)"/>
+          <g id="upper" transform="rotate(-7 888 545)">
+            <path d="M848 420 C852 397 914 395 920 420 L932 540 C906 558 866 558 850 544 Z" stroke-width="2" stroke-linejoin="round"/>
+            <line x1="878" y1="384" x2="882" y2="414" stroke-width="26"/>
+            <circle cx="874" cy="360" r="35" stroke="none"/>
+            <path d="M840 356 Q842 320 878 320 Q914 322 910 364 Q900 342 878 342 Q856 340 840 356 Z" fill="var(--man-2)" stroke="none"/>
+            <g id="stress" stroke="var(--man)" stroke-width="3.5" stroke-linecap="round" fill="none"><path d="M906 316 l13 -15"/><path d="M918 338 l18 -6"/><path d="M890 306 l3 -19"/></g>
+            <line x1="872" y1="430" x2="842" y2="500" stroke-width="28"/>
+            <line x1="842" y1="500" x2="790" y2="526" stroke-width="24"/>
+            <circle cx="784" cy="528" r="13" stroke="none"/>
+          </g>
+        </g>
+        <!-- burbujas del hombre -->
+        <g id="mBubs"></g>
+      </g>
+
+      <!-- Nube de pensamiento -->
+      <g id="thought">
+        <circle id="td1" cx="846" cy="306" r="7" fill="var(--paper)" stroke="var(--line)" stroke-width="3"/>
+        <circle id="td2" cx="826" cy="284" r="10" fill="var(--paper)" stroke="var(--line)" stroke-width="3"/>
+        <g id="cloud" transform="translate(770 140) scale(.9)">
+          <g id="cloudShape" filter="url(#soft)"></g>
+          <g id="threadG"><path id="thread" d="" fill="none" stroke="var(--thread)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/></g>
+        </g>
+      </g>
+    </svg>
+
+    <div class="caps">
+      <div class="cap cap-hero on" data-cap="0">
+        <p class="eyebrow"><span class="rule"></span><span class="eb">Clinical psychology<span class="eb-sep"> · </span><span class="eb-2">Online and in person</span></span></p>
+        <p class="lede">Some knots come loose <em>when you talk.</em></p>
+        <div class="cue" aria-hidden="true"><span class="cue-line"><i></i></span>Scroll</div>
+      </div>
+      <div class="cap" data-cap="1">
+        <h2>You don't have to untangle it <em>alone.</em></h2>
+        <p>A professional space to be heard, without judgement and at your own pace.</p>
+      </div>
+      <div class="cap" data-cap="2">
+        <h2>Putting it into words is pulling <em>the first thread.</em></h2>
+        <p>What is said out loud starts to take up less space.</p>
+      </div>
+      <div class="cap" data-cap="3">
+        <h2>Knot by knot, the chaos <em>takes shape.</em></h2>
+        <p>Understanding what is happening to you is the start of changing it.</p>
+      </div>
+      <div class="cap" data-cap="4">
+        <h2>Talking sorts things out. <em>Sorting brings relief.</em></h2>
+        <p>Your first session can be today.</p>
+        <a class="btn" href="#contacto">Book a first session</a>
+      </div>
+    </div>
+    <div class="prog" aria-hidden="true"><i></i><b></b><b></b><b></b><b></b><b></b></div>
+  </div>
+</div>
+
+<section class="band" id="sobre-mi" aria-labelledby="about-t">
+  <div class="wrap about-grid">
+    <figure class="portrait rv"><svg viewBox="0 0 657 812" role="img" aria-label="Illustration of a consulting room: an empty armchair next to a plant"><rect width="657" height="812" fill="#E7DCC9"/><rect y="560" width="657" height="252" fill="#DCCDB5"/><path d="M60 140h200v250H60z" fill="#F4ECDD" opacity=".9"/><path d="M160 140v250M60 265h200" stroke="#CDBB9E" stroke-width="6"/><path d="M40 610 Q330 585 620 610" stroke="#C9B391" stroke-width="3" fill="none"/><g transform="translate(250 330)"><rect x="18" y="0" width="230" height="190" rx="46" fill="#C9B391"/><rect x="0" y="120" width="266" height="120" rx="40" fill="#D7C3A2"/><rect x="38" y="150" width="190" height="56" rx="22" fill="#E2D1B3"/><path d="M40 238l-8 70M226 238l8 70" stroke="#8C7556" stroke-width="10" stroke-linecap="round"/></g><g transform="translate(520 470)"><path d="M0 0c-30-60-10-140 0-190M0 0c25-55 50-110 70-160M0 0c-40-40-80-70-110-120M0 0c40-30 70-60 95-70" stroke="#4E7A70" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M-38 0h76l-12 95h-52z" fill="#B97A55"/></g><path d="M70 730c40 30 90-20 130 10s70 40 110 0" stroke="#27302F" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg></figure>
+    <div class="about-col">
+    <div class="about-head rv">
+      <p class="eyebrow-s">About me</p>
+      <h2 class="h-sec" id="about-t">Listening closely is <em>half the work.</em></h2>
+    </div>
+    <div class="about-txt rv">
+      <p class="bio" data-cfg="bio">I am a clinical psychologist. I work with people going through distress, anxiety, change, or a discomfort they cannot quite make sense of. I believe in the value of words: what is put into words starts to fall into place.</p>
+      <ul class="creds" id="creds">
+        <li>Degree in Psychology</li>
+        <li>Clinical psychology training</li>
+        <li>Registered psychologist · Licence no. 00000</li>
+      </ul>
+      <div class="sign" data-cfg="name">Name Surname</div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="band areas" aria-labelledby="areas-t">
+  <div class="wrap">
+    <div class="areas-head rv">
+      <h2 id="areas-t">How I can help</h2>
+      <p>Individual therapy, in the consulting room or online. A space to talk about what is happening to you, notice what keeps repeating, and find other ways of being.</p>
+    </div>
+    <div class="grid4 rv">
+      <div class="area">
+        <svg width="56" height="36" viewBox="0 0 56 36" aria-hidden="true"><path d="M4 18c6-14 10 14 16 0s10 14 16 0 10 14 16 0" fill="none" stroke="var(--thread)" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <h3>Anxiety and stress</h3>
+        <p>Constant worry, insomnia, the feeling that you can't stop.</p>
+      </div>
+      <div class="area">
+        <svg width="56" height="36" viewBox="0 0 56 36" aria-hidden="true"><path d="M4 26c10 0 12-18 24-18s14 18 24 18" fill="none" stroke="var(--thread)" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <h3>Mood</h3>
+        <p>Lasting sadness, low energy and loss of interest.</p>
+      </div>
+      <div class="area">
+        <svg width="56" height="36" viewBox="0 0 56 36" aria-hidden="true"><circle cx="20" cy="18" r="11" fill="none" stroke="var(--thread)" stroke-width="2.4"/><circle cx="36" cy="18" r="11" fill="none" stroke="var(--sage)" stroke-width="2.4"/></svg>
+        <h3>Relationships</h3>
+        <p>Conflict, break-ups and ways of relating that keep repeating.</p>
+      </div>
+      <div class="area">
+        <svg width="56" height="36" viewBox="0 0 56 36" aria-hidden="true"><path d="M4 30 L52 6" fill="none" stroke="var(--thread)" stroke-width="2.4" stroke-linecap="round"/><circle cx="52" cy="6" r="3.5" fill="var(--sage)"/></svg>
+        <h3>Grief and change</h3>
+        <p>Loss, moving house and stages of life that are hard to get through.</p>
+      </div>
+    </div>
+    <div class="facts">
+      <span>40-minute sessions</span>
+      <span>In person</span>
+      <span>Online</span>
+      <span>Professional confidentiality</span>
+    </div>
+  </div>
+</section>
+
+<section class="band process" aria-labelledby="proc-t">
+  <div class="wrap">
+    <p class="eyebrow-s">How we start</p>
+    <h2 class="h-sec" id="proc-t">Three steps, <em>no fuss.</em></h2>
+    <ol class="steps" id="steps">
+      <li><span class="n">1</span><h3>You write to me</h3><p>On WhatsApp or with the form on this page. I reply to arrange our first meeting.</p></li>
+      <li><span class="n">2</span><h3>First session</h3><p>We meet, you tell me what brings you here, and together we see whether this space is right for you.</p></li>
+      <li><span class="n">3</span><h3>The process</h3><p>Weekly 40-minute sessions, in the consulting room or online, at your own pace.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="faq-t">
+  <div class="wrap faq-grid">
+    <div class="rv">
+      <p class="eyebrow-s">Frequently asked questions</p>
+      <h2 class="h-sec" id="faq-t">What people usually ask <em>before starting.</em></h2>
+      <p class="lead">Still have a question? Write to me and we'll talk it through.</p>
+    </div>
+    <div class="qa rv">
+      <details open><summary>What if I don't know where to start?</summary><p>That is the most common thing. You don't need to arrive with anything prepared: in the first session we sort through whatever comes up, together.</p></details>
+      <details><summary>What is therapy like?</summary><p>It is a talking treatment. Starting from what you tell me, we work on what keeps repeating and what is hard to say, so you can find other answers to what is happening to you.</p></details>
+      <details><summary>How long is each session, and how often do we meet?</summary><p>Sessions last 40 minutes. Usually we meet once a week, and the frequency is adjusted to each process.</p></details>
+      <details><summary>Does online therapy work just as well?</summary><p>Yes. I see clients by video call, with the same structure and the same confidentiality as in the consulting room. You only need a quiet place and a good connection.</p></details>
+      <details><summary>How many sessions will I need?</summary><p>There is no fixed number. The treatment follows each person's pace, and we keep talking about it as we go.</p></details>
+      <details><summary>Is what I say confidential?</summary><p>Yes. Everything said in session is protected by professional confidentiality.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="contacto" aria-labelledby="contacto-t" style="background:var(--paper);border-top:1px solid var(--line)">
+  <div class="wrap contact">
+    <div class="rv">
+      <p class="eyebrow-s">First session</p>
+      <h2 class="h-sec" id="contacto-t">Let's start with <em>a conversation.</em></h2>
+      <p class="lead">In the first meeting we talk about what brings you here, how I work and whether this space is right for you. No obligation to continue.</p>
+      <div class="phone">
+        <small>Phone and WhatsApp</small>
+        <div class="phone-line">
+          <span class="pl-label">Appointments <em>In person and online</em></span>
+          <div class="phone-row"><span class="phone-num" id="phoneES" data-cfg="phoneES">+34 000 000 000</span><button class="copy" data-copy="phoneES" type="button">Copy</button></div>
+        </div>
+      </div>
+      <dl class="details">
+        <dt>Practice</dt><dd><span data-cfg="address">1 Example Street · City</span></dd>
+        <dt>Hours</dt><dd data-cfg="hours">Monday to Friday, 9 am to 8 pm</dd>
+        <dt>Email</dt><dd><a href="mailto:consulta@example.com" data-cfg="email">consulta@example.com</a></dd>
+      </dl>
+    </div>
+
+    <div class="form" id="formCard" style="background:var(--cream)">
+      <form id="form" novalidate>
+        <h3>Request a session</h3>
+        <p>Fill in your details and I'll get back to you to arrange a day.</p>
+        <div class="field" id="f-name">
+          <label for="name">Name</label>
+          <input id="name" name="name" autocomplete="name" placeholder="Your name" style="background:var(--paper)">
+          <span class="err" aria-live="polite"></span>
+        </div>
+        <div class="field" id="f-contact">
+          <label for="contactInfo">Phone or email</label>
+          <input id="contactInfo" name="contact" autocomplete="tel" placeholder="So I can reply" style="background:var(--paper)">
+          <span class="err" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <span class="legend" id="day-l">Preferred day</span>
+          <div class="days" id="days" role="radiogroup" aria-labelledby="day-l"></div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <span class="legend" id="mod-l">Format</span>
+            <div class="seg" role="radiogroup" aria-labelledby="mod-l">
+              <input type="radio" name="mode" id="m1" value="in person" checked><label for="m1">In person</label>
+              <input type="radio" name="mode" id="m2" value="online"><label for="m2">Online</label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="slot">Time of day</label>
+            <select id="slot" name="slot" style="background:var(--paper)">
+              <option>Any time</option><option>Morning</option><option>Afternoon</option><option>Evening</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="msg">Briefly, what brings you here? (optional)</label>
+          <textarea id="msg" name="msg" placeholder="Only what you want to share" style="background:var(--paper)"></textarea>
+        </div>
+        <button class="btn" type="submit">Request a session</button>
+        <p class="note">Your details are only used to arrange the appointment.</p>
+      </form>
+      <div class="done" id="done" hidden>
+        <div class="tick"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M5 14l5 5 11-12" fill="none" stroke="var(--sage-2)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Your request is ready</h3>
+        <p>Send it on WhatsApp so it goes straight to the diary.</p>
+        <pre id="preview" style="background:var(--paper)"></pre>
+        <div class="acts">
+          <a class="btn" id="waLink" href="#" target="_blank" rel="noopener">Send on WhatsApp</a>
+          <button class="btn ghost" id="copyMsg" type="button">Copy message</button>
+        </div>
+        <p class="note"><button class="copy" id="editAgain" type="button">Edit details</button></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><span data-cfg="name">Name Surname</span> · <span data-cfg="title">Psychologist · Clinical psychology</span></span>
+    <nav class="links" aria-label="Sections"><a href="#sobre-mi">About</a><a href="#faq-t">FAQ</a><a href="#contacto">Contact</a></nav>
+    <span>In an emergency, call 112. If you are having thoughts of harming yourself, contact your local crisis line or emergency services at any time.</span>
+  </div>
+</footer>
+
+<a class="fab" id="fab" href="#contacto" aria-label="Book a session">
+  <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4.5h12a1.5 1.5 0 0 1 1.5 1.5v7a1.5 1.5 0 0 1-1.5 1.5H9l-4 3v-3H4A1.5 1.5 0 0 1 2.5 13V6A1.5 1.5 0 0 1 4 4.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+  Book a session
+</a>
+
+<script>
+/* ============================================================
+   PRACTICE DETAILS: edit only this block
+   ============================================================ */
+const CONFIG = {
+  name:     "Name Surname",
+  title:    "Psychologist · Clinical psychology",
+  phoneES:    "+34 000 000 000",
+  whatsappES: "34000000000",        // solo dígitos, con código de país
+  email:    "consulta@example.com",
+  address:  "1 Example Street · City",
+  hours:    "Monday to Friday, 9 am to 8 pm",
+  bio:      "I am a clinical psychologist. I work with people going through distress, anxiety, change, or a discomfort they cannot quite make sense of. I believe in the value of words: what is put into words starts to fall into place.",
+  credentials: [
+    "Degree in Psychology",
+    "Clinical psychology training",
+    "Registered psychologist · Licence no. 00000"
+  ]
+};
+
+/* Frases del hombre (| = salto de línea) y momento del scroll (0 a 1) en que aparecen */
+const LINES = [
+  [0.29, "I don't even know|where to start…"],
+  [0.39, "Lately everything|feels heavy."],
+  [0.49, "I think it started|with work…"],
+  [0.59, "Said out loud,|it looks different."],
+  [0.69, "Now I understand|what's going on."],
+  [0.84, "Thank you. I feel|lighter."]
+];
+
+document.querySelectorAll("[data-cfg]").forEach(el => { const v = CONFIG[el.dataset.cfg]; if (v) el.textContent = v; });
+(() => {
+  const ul = document.getElementById("creds");
+  if (CONFIG.credentials && CONFIG.credentials.length) { ul.textContent = ""; CONFIG.credentials.forEach(c => { const li = document.createElement("li"); li.textContent = c; ul.appendChild(li); }); }
+})();
+
+(() => {
+  const NS = "http://www.w3.org/2000/svg";
+  const $ = id => document.getElementById(id);
+  const svg = $("scene"), story = $("story");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const A = reduce ? 0 : 1;
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const map = (v, a, b) => clamp((v - a) / (b - a));
+  const easeOut = t => 1 - Math.pow(1 - t, 3);
+  const easeIO = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  const mixHex = (a, b, t) => "#" + [1, 3, 5].map(i => Math.round(parseInt(a.substr(i, 2), 16) * (1 - t) + parseInt(b.substr(i, 2), 16) * t).toString(16).padStart(2, "0")).join("");
+
+  /* Encuadre: apaisado vs. retrato */
+  const portrait = matchMedia("(max-aspect-ratio: 4/5)");
+  const setView = () => svg.setAttribute("viewBox", portrait.matches ? "214 -18 820 740" : "0 -40 1200 1010");
+  setView(); portrait.addEventListener("change", setView);
+
+  /* Nube: unión de círculos (contorno abajo, relleno arriba) */
+  const puffs = [[-150,20,80],[-70,-40,95],[40,-55,100],[140,-20,85],[190,40,64],[105,62,78],[-10,66,82],[-122,66,68],[0,5,120]];
+  const cs = $("cloudShape");
+  ["line", "fill"].forEach(layer => puffs.forEach(([x, y, r]) => {
+    const c = document.createElementNS(NS, "circle");
+    c.setAttribute("cx", x); c.setAttribute("cy", y); c.setAttribute("r", r);
+    c.setAttribute("fill", "var(--cloud-fill, var(--paper))");
+    if (layer === "line") { c.setAttribute("stroke", "var(--line)"); c.setAttribute("stroke-width", "7"); }
+    cs.appendChild(c);
+  }));
+
+  /* Hilo: garabato caótico + punta suelta; destino: línea ordenada */
+  const N = 560, TAIL = 46, tangle = [], target = [];
+  const TAU = Math.PI * 2;
+  for (let i = 0; i < N; i++) {
+    const t = i / (N - TAIL);
+    let x, y;
+    if (i < N - TAIL) {
+      x = 150 * (.5 * Math.sin(TAU * 5.1 * t + 1.3) + .3 * Math.sin(TAU * 11.3 * t + .4) + .2 * Math.sin(TAU * 23.7 * t + 2.1));
+      y = 78 * (.5 * Math.cos(TAU * 6.3 * t + .7) + .3 * Math.sin(TAU * 13.9 * t + 1.9) + .2 * Math.cos(TAU * 19.1 * t + .2));
+    } else {
+      const k = (i - (N - TAIL)) / (TAIL - 1), a = tangle[N - TAIL - 1];
+      const tx = -222, ty = 100, kk = easeIO(k);
+      x = a[0] + (tx - a[0]) * kk + Math.sin(k * Math.PI) * 18;
+      y = a[1] + (ty - a[1]) * kk - Math.sin(k * Math.PI) * 14;
+    }
+    tangle.push([x, y]);
+    const u = i / (N - 1);
+    target.push([130 - u * 470, 12 + Math.sin(u * TAU * 2.5) * 9 * (1 - u * .6)]);
+  }
+  const thread = $("thread"), threadG = $("threadG");
+  const pts = new Array(N);
+  function drawThread(U, time) {
+    const W = .38, J = 2.4 * A * (1 - U);
+    for (let i = 0; i < N; i++) {
+      const pos = 1 - i / (N - 1);
+      const lp = easeIO(clamp((U * (1 + W) - pos) / W));
+      const a = tangle[i], b = target[i];
+      const j = J * (1 - lp);
+      pts[i] = [a[0] + (b[0] - a[0]) * lp + j * Math.sin(time * 2.1 + i * .37),
+                a[1] + (b[1] - a[1]) * lp + j * Math.cos(time * 1.7 + i * .29)];
+    }
+    let d = `M${pts[0][0].toFixed(1)} ${pts[0][1].toFixed(1)}`;
+    for (let i = 1; i < N - 1; i++) {
+      const p = pts[i], q = pts[i + 1];
+      d += `Q${p[0].toFixed(1)} ${p[1].toFixed(1)} ${((p[0] + q[0]) / 2).toFixed(1)} ${((p[1] + q[1]) / 2).toFixed(1)}`;
+    }
+    d += `L${pts[N - 1][0].toFixed(1)} ${pts[N - 1][1].toFixed(1)}`;
+    thread.setAttribute("d", d);
+  }
+
+  /* Burbujas del hombre */
+  const mBubs = $("mBubs"), bubs = [];
+  const RIGHT = 790, TOP = 392, LH = 31, PADX = 26, PADY = 18;
+  LINES.forEach(([at, txt]) => {
+    const g = document.createElementNS(NS, "g");
+    g.setAttribute("class", "bub bub-man");
+    const lines = txt.split("|");
+    const h = lines.length * LH + PADY * 2 - 4;
+    const tail = document.createElementNS(NS, "path");
+    tail.setAttribute("d", `M${RIGHT - 46} ${TOP + 4} L${RIGHT + 24} ${TOP - 22} L${RIGHT - 16} ${TOP + 4} Z`);
+    tail.setAttribute("stroke-linejoin", "round");
+    const rect = document.createElementNS(NS, "rect");
+    rect.setAttribute("y", TOP); rect.setAttribute("height", h); rect.setAttribute("rx", 24);
+    const cover = document.createElementNS(NS, "path");
+    cover.setAttribute("d", `M${RIGHT - 42} ${TOP + 1.5} L${RIGHT - 19} ${TOP + 1.5}`);
+    cover.setAttribute("style", "stroke:var(--paper);stroke-width:4");
+    const text = document.createElementNS(NS, "text");
+    text.setAttribute("text-anchor", "middle");
+    lines.forEach((l, k) => {
+      const ts = document.createElementNS(NS, "tspan");
+      ts.setAttribute("y", TOP + PADY + 22 + k * LH);
+      ts.textContent = l; text.appendChild(ts);
+    });
+    g.append(tail, rect, cover, text); mBubs.appendChild(g);
+    bubs.push({ at, g, rect, text });
+  });
+  function sizeBubbles() {
+    bubs.forEach(b => {
+      let w = 0;
+      b.text.querySelectorAll("tspan").forEach(t => { w = Math.max(w, t.getComputedTextLength()); });
+      w = Math.max(w + PADX * 2, 150);
+      b.rect.setAttribute("x", RIGHT - w); b.rect.setAttribute("width", w);
+      b.text.querySelectorAll("tspan").forEach(t => t.setAttribute("x", RIGHT - w / 2));
+    });
+  }
+  sizeBubbles();
+  document.fonts && document.fonts.ready.then(sizeBubbles);
+
+  /* Lluvia en la ventana y polvo de luz */
+  const rain = $("rain"), drops = [];
+  for (let i = 0; i < 18; i++) {
+    const l = document.createElementNS(NS, "line");
+    const x = 420 + Math.random() * 140, s = Math.random() * 200;
+    l.setAttribute("stroke", "#8E979A"); l.setAttribute("stroke-width", "1.6"); l.setAttribute("stroke-linecap", "round");
+    rain.appendChild(l); drops.push({ l, x, s, v: 210 + Math.random() * 90 });
+  }
+  const motes = $("motes"), dust = [];
+  for (let i = 0; i < 22; i++) {
+    const c = document.createElementNS(NS, "circle");
+    c.setAttribute("r", (1.6 + Math.random() * 2.4).toFixed(1));
+    c.setAttribute("fill", "#E9C48A");
+    motes.appendChild(c);
+    dust.push({ c, x: 120 + Math.random() * 1000, y: 80 + Math.random() * 560, ph: Math.random() * TAU, sp: .2 + Math.random() * .4 });
+  }
+
+  /* Escena */
+  const woman = $("woman"), upper = $("upper"), cloud = $("cloud"), wBub = $("wBub"), wHead = $("wHead"), pen = $("pen");
+  const rug = $("rug"), floor = $("floor"), sky = $("winSky"), sun = $("winSun"), stress = $("stress");
+  const td1 = $("td1"), td2 = $("td2"), glow = $("lampGlow");
+  const caps = [...document.querySelectorAll("[data-cap]")];
+  const capAt = [0, .1, .29, .55, .8];
+  const prog = document.querySelector(".prog i"), ticks = [...document.querySelectorAll(".prog b")];
+  ticks.forEach((b, k) => b.style.top = (capAt[k] * 100) + "%");
+  let target_p = 0, cur = 0, lastCap = -1, lastBub = -2, womanOn = null, nodT = -9, visible = true;
+
+  function readScroll() {
+    const r = story.getBoundingClientRect();
+    target_p = clamp(-r.top / Math.max(1, r.height - innerHeight));
+    visible = r.bottom > -50;
+  }
+  function render(p, time) {
+    // Mujer: paneo desde la izquierda
+    const w = easeOut(map(p, .08, .24));
+    woman.setAttribute("transform", `translate(${(-1100 * (1 - w)).toFixed(1)} 0)`);
+    // Composición: solo = descentrada y fría; con ella = equilibrada y cálida
+    rug.setAttribute("cx", (880 - 240 * w).toFixed(1));
+    rug.setAttribute("rx", (210 + 230 * w).toFixed(1));
+    rug.setAttribute("ry", (22 + 4 * w).toFixed(1));
+    rug.setAttribute("opacity", (.55 + .15 * w).toFixed(2));
+    floor.setAttribute("x1", (620 - 580 * w).toFixed(1));
+    document.documentElement.style.setProperty("--stage-bg", mixHex("#E9E6DF", "#F7EFE0", Math.max(w, map(p, .97, 1))));
+    const won = p > .2;
+    if (won !== womanOn) { wBub.classList.toggle("on", won); womanOn = won; }
+
+    // Desenredar
+    const U = map(p, .29, .8);
+    drawThread(U, time);
+    const breath = A * Math.sin(time * 1.4);
+    upper.setAttribute("transform", `rotate(${(-7 + 7 * easeIO(U) + .5 * breath).toFixed(2)} 888 545)`);
+    stress.setAttribute("opacity", ((1 - map(U, 0, .45)) * (.55 + .45 * A * Math.sin(time * 7))).toFixed(2));
+    glow.setAttribute("opacity", (.3 + .5 * U).toFixed(2));
+    svg.style.setProperty("--cloud-fill", mixHex("#E2DFD8", "#FFFBF3", easeIO(U)));
+
+    // Ventana: de lluvia a sol
+    sky.setAttribute("fill", mixHex("#C6CACA", "#FBE3CB", easeIO(map(p, .35, .9))));
+    const S = easeOut(map(p, .55, .95));
+    sun.setAttribute("cy", (300 - 120 * S).toFixed(1));
+    sun.setAttribute("opacity", S.toFixed(2));
+    const R = 1 - map(p, .3, .7);
+    rain.setAttribute("opacity", R.toFixed(2));
+    if (R > 0) drops.forEach(d => {
+      const y = 96 + ((d.s + time * d.v * A) % 200);
+      d.l.setAttribute("x1", d.x.toFixed(1)); d.l.setAttribute("y1", y.toFixed(1));
+      d.l.setAttribute("x2", (d.x - 4).toFixed(1)); d.l.setAttribute("y2", (y + 14).toFixed(1));
+    });
+
+    // Polvo de luz cuando todo se calma
+    const M = map(p, .6, .95);
+    motes.setAttribute("opacity", M.toFixed(2));
+    if (M > 0) dust.forEach(d => {
+      d.c.setAttribute("cx", (d.x + 18 * Math.sin(time * d.sp + d.ph) * A).toFixed(1));
+      d.c.setAttribute("cy", (d.y - ((time * 8 * d.sp * A + d.ph * 30) % 60)).toFixed(1));
+      d.c.setAttribute("opacity", (.35 + .5 * Math.abs(Math.sin(time * .8 + d.ph))).toFixed(2));
+    });
+
+    // El hilo sale de la nube y desaparece
+    const D = easeIO(map(p, .8, .9));
+    threadG.setAttribute("transform", `translate(${(-200 * D).toFixed(1)} 0)`);
+    thread.setAttribute("stroke-dasharray", `${(1 - D).toFixed(4)} 2`);
+    thread.setAttribute("stroke-dashoffset", `${(-D).toFixed(4)}`);
+    threadG.setAttribute("opacity", (1 - map(p, .86, .9)).toFixed(2));
+
+    // La nube: inquieta al principio, se calma y se disuelve
+    const C = easeIO(map(p, .88, .96));
+    const nerv = A * (1 - U);
+    const sc = .9 * (1 - .35 * C) * (1 + .014 * nerv * Math.sin(time * 1.9));
+    const rot = 1.4 * nerv * Math.sin(time * 2.6);
+    cloud.setAttribute("transform", `translate(770 ${(140 - 30 * C).toFixed(1)}) rotate(${rot.toFixed(2)}) scale(${sc.toFixed(3)})`);
+    cloud.setAttribute("opacity", (1 - C).toFixed(3));
+    td2.setAttribute("opacity", (1 - map(p, .86, .92)).toFixed(2));
+    td1.setAttribute("opacity", (1 - map(p, .84, .9)).toFixed(2));
+
+    // Burbujas + la psicóloga asiente cuando él habla
+    let bi = -1;
+    bubs.forEach((b, k) => { if (p >= b.at) bi = k; });
+    if (bi !== lastBub) { bubs.forEach((b, k) => b.g.classList.toggle("on", k === bi)); if (bi > lastBub && bi >= 0) nodT = time; lastBub = bi; }
+    const dt = time - nodT;
+    const nod = dt < 2.2 ? 5 * Math.sin(dt * 8) * Math.exp(-dt * 1.8) * A : 0;
+    wHead.setAttribute("transform", `rotate(${(3 + nod).toFixed(2)} 326 404)`);
+    const writing = bi >= 0 && bi < 5 && Math.sin(time * 1.3) > .1 ? A : 0;
+    pen.setAttribute("transform", `translate(${(3 * writing * Math.sin(time * 13)).toFixed(1)} ${(1.5 * writing * Math.sin(time * 21)).toFixed(1)})`);
+
+    // Textos
+    let ci = 0; capAt.forEach((a, k) => { if (p >= a) ci = k; });
+    if (ci !== lastCap) { caps.forEach((c, k) => { c.classList.toggle("on", k === ci); c.setAttribute("aria-hidden", k === ci ? "false" : "true"); }); lastCap = ci; }
+    prog.style.transform = `scaleY(${p.toFixed(4)})`;
+    ticks.forEach((b, k) => b.classList.toggle("on", p >= capAt[k]));
+  }
+
+  addEventListener("scroll", readScroll, { passive: true });
+  addEventListener("resize", readScroll);
+  readScroll(); cur = target_p;
+  function loop(ts) {
+    const time = ts / 1000;
+    cur = reduce ? target_p : cur + (target_p - cur) * .14;
+    if (Math.abs(target_p - cur) < .0002) cur = target_p;
+    if (visible) render(cur, time);
+    requestAnimationFrame(loop);
+  }
+  render(cur, 0);
+  requestAnimationFrame(loop);
+})();
+
+/* ---------- Recorrido automático ----------
+   A los 2 s sin actividad baja solo: rápido al principio (entra la psicóloga),
+   más lento durante el desenredo, y se detiene con la foto centrada.
+   Si la persona toca o hace scroll, se pausa; tras 2 s quieta, retoma desde ahí. */
+(() => {
+  if (window.__noAuto || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const IDLE = 2000, FAST_S = 2.6, SLOW_S = innerWidth < 600 ? 24 : 27;
+  const story = document.getElementById("story"), root = document.documentElement;
+  let running = false, raf = 0, idleT = 0, pos = 0, lastSet = -1, lastTs = 0, runT0 = 0;
+
+  const targetY = () => {
+    const pr = document.querySelector(".portrait").getBoundingClientRect(), header = 64;
+    return Math.max(0, pr.top + scrollY + pr.height / 2 - (header + (innerHeight - header) / 2));
+  };
+  const speed = y => {                       // píxeles por segundo según el tramo
+    const S = Math.max(1, story.offsetHeight - innerHeight), T = targetY();
+    const cut = .26 * S;                     // hasta acá: la psicóloga ya se sentó
+    const fast = cut / FAST_S, slow = Math.max(1, T - cut) / SLOW_S;
+    const k = Math.min(1, Math.max(0, (y - cut * .8) / (cut * .4)));
+    return fast + (slow - fast) * k;
+  };
+  function pause() {
+    if (running) { running = false; cancelAnimationFrame(raf); root.style.scrollBehavior = ""; }
+    clearTimeout(idleT); idleT = setTimeout(resume, IDLE);
+  }
+  function resume() {
+    if (running || scrollY >= targetY() - 4) return;
+    running = true; pos = scrollY; lastSet = -1; lastTs = 0; runT0 = performance.now();
+    root.style.scrollBehavior = "auto";
+    raf = requestAnimationFrame(step);
+  }
+  function step(now) {
+    if (!running) return;
+    if (lastSet >= 0 && Math.abs(scrollY - lastSet) > 40) return pause();   // la persona tomó el control
+    const dt = lastTs ? Math.min(.05, (now - lastTs) / 1000) : 0; lastTs = now;
+    const T = targetY(), dist = T - pos;
+    const rampIn = Math.min(1, (now - runT0) / 700);                          // arranque suave
+    const rampOut = Math.max(.12, Math.min(1, dist / (innerHeight * .45)));   // frenado suave
+    pos = Math.min(T, pos + speed(pos) * rampIn * rampOut * dt);
+    lastSet = Math.round(pos); scrollTo(0, lastSet);
+    if (T - pos < .5) { running = false; root.style.scrollBehavior = ""; return; }
+    raf = requestAnimationFrame(step);
+  }
+  ["wheel", "touchstart", "touchmove", "pointerdown", "keydown"].forEach(e => addEventListener(e, pause, { passive: true, capture: true }));
+  addEventListener("scroll", () => { if (!running) { clearTimeout(idleT); idleT = setTimeout(resume, IDLE); } }, { passive: true });
+  idleT = setTimeout(resume, IDLE);
+})();
+
+/* ---------- Detalles de página ---------- */
+(() => {
+  const $ = id => document.getElementById(id);
+  // Aparición suave
+  if ("IntersectionObserver" in window) {
+    document.documentElement.classList.add("rv-on");
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".rv").forEach(el => io.observe(el));
+  }
+  // Hilo de los pasos + botón flotante
+  const steps = $("steps"), fab = $("fab"), story = $("story"), contact = $("contacto");
+  function onScroll() {
+    const r = steps.getBoundingClientRect();
+    steps.style.setProperty("--draw", Math.min(1, Math.max(0, (innerHeight * .85 - r.top) / (r.height + innerHeight * .35))).toFixed(3));
+    const sr = story.getBoundingClientRect(), cr = contact.getBoundingClientRect();
+    fab.classList.toggle("on", sr.bottom < innerHeight * .5 && !(cr.top < innerHeight * .8 && cr.bottom > 0));
+  }
+  addEventListener("scroll", onScroll, { passive: true }); addEventListener("resize", onScroll); onScroll();
+})();
+
+/* ---------- Contacto ---------- */
+(() => {
+  const $ = id => document.getElementById(id);
+  // Próximos días hábiles
+  const days = $("days");
+  const wd = new Intl.DateTimeFormat("en-GB", { weekday: "short" }), mo = new Intl.DateTimeFormat("en-GB", { month: "short" });
+  const full = new Intl.DateTimeFormat("en-GB", { weekday: "long", day: "numeric", month: "long" });
+  const opts = [{ v: "any day", html: '<small>Any</small><b>day</b>', any: true }];
+  const d = new Date();
+  while (opts.length < 11) {
+    d.setDate(d.getDate() + 1);
+    if (d.getDay() === 0 || d.getDay() === 6) continue;
+    opts.push({ v: full.format(d), html: `<small>${wd.format(d).replace(".", "")}</small><b>${d.getDate()}</b><small>${mo.format(d).replace(".", "")}</small>` });
+  }
+  opts.forEach((o, k) => {
+    const id = "d" + k;
+    days.insertAdjacentHTML("beforeend", `<input type="radio" name="day" id="${id}" value="${o.v}"${k ? "" : " checked"}><label for="${id}"${o.any ? ' class="any"' : ""}>${o.html}</label>`);
+  });
+
+  async function copy(text, btn, label) {
+    try { await navigator.clipboard.writeText(text); btn.textContent = "Copied"; }
+    catch (e) {
+      const r = document.createRange(); const el = btn.dataset.copy ? $(btn.dataset.copy) : $("preview");
+      r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = "Selected, press Ctrl+C";
+    }
+    setTimeout(() => btn.textContent = label, 2200);
+  }
+  document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", e => copy(CONFIG[b.dataset.copy], e.currentTarget, "Copy")));
+
+  const form = $("form"), done = $("done");
+  function setErr(id, msg) { const f = $(id); f.classList.toggle("bad", !!msg); f.querySelector(".err").textContent = msg || ""; }
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const F = form.elements, name = $("name").value.trim(), contact = $("contactInfo").value.trim();
+    setErr("f-name", name ? "" : "Write your name so I know what to call you.");
+    setErr("f-contact", contact.length >= 6 ? "" : "Leave a phone number or email so I can reply.");
+    if (!name) { $("name").focus(); return; }
+    if (contact.length < 6) { $("contactInfo").focus(); return; }
+    const mode = F.mode.value, day = F.day.value, slot = $("slot").value, msg = $("msg").value.trim();
+    const text = `Hello, I'm ${name}. I would like to request a first session.\n` +
+      `Format: ${mode}. Preference: ${day}, ${slot.toLowerCase()}.\n` +
+      (msg ? `Reason: ${msg}\n` : "") + `My contact: ${contact}`;
+    $("preview").textContent = text;
+    $("waLink").href = `https://wa.me/${CONFIG.whatsappES}?text=${encodeURIComponent(text)}`;
+    form.hidden = true; done.hidden = false;
+  });
+  $("copyMsg").addEventListener("click", e => copy($("preview").textContent, e.currentTarget, "Copy message"));
+  $("editAgain").addEventListener("click", () => { done.hidden = true; form.hidden = false; $("name").focus(); });
+})();
+</script>
+
+
+<style>.pfdemo{position:fixed;left:12px;bottom:12px;z-index:60;display:flex;gap:10px;align-items:center;flex-wrap:wrap;max-width:calc(100vw - 24px);font:500 12px/1.2 Figtree,system-ui,sans-serif;background:rgba(39,48,47,.88);color:#F7EFE0;padding:8px 12px;border-radius:99px;backdrop-filter:blur(6px)}.pfdemo a{color:#F7EFE0;text-decoration:none;opacity:.75}.pfdemo a[aria-current]{opacity:1;font-weight:700;text-decoration:underline}.pfdemo span{opacity:.8}@media (max-width:600px){.pfdemo{bottom:auto;top:auto;left:8px;bottom:8px;font-size:11px;padding:6px 10px}.pfdemo span{display:none}}</style>
+<div class="pfdemo" id="pfdemo"><a href="../../?lang=en#campaign">← Back to portfolio</a><span>Portfolio demo · placeholder details</span><a href="en.html" aria-current="page">EN</a> <a href="it.html">IT</a> <a href="es.html">ES</a></div>
+</body>
+</html>

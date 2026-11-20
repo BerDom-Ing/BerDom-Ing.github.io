@@ -32,7 +32,14 @@
       const v = document.getElementById(b.dataset.target);
       v.muted = !v.muted;
       if (!v.muted) { v.currentTime = 0; v.play().catch(() => {}); }
-      b.textContent = v.muted ? "🔊 Sound on" : "🔇 Mute";
+      const t = window.I18N ? window.I18N.t : (k) => ({ snd_on: "🔊 Sound on", snd_off: "🔇 Mute" })[k];
+      b.textContent = t(v.muted ? "snd_on" : "snd_off");
+    });
+  });
+  addEventListener("langchange", () => {
+    document.querySelectorAll(".unmute").forEach((b) => {
+      const v = document.getElementById(b.dataset.target);
+      if (v && !v.muted) b.textContent = window.I18N.t("snd_off");
     });
   });
 

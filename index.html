@@ -3,13 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bernardo Dominguez | AI Technical Artist</title>
-<meta name="description" content="Bernardo Dominguez builds generative AI content pipelines for games and realtime 3D: AI 3D assets shipped in Godot, ComfyUI / FLUX illustration pipelines, AI cinematics, VR reconstruction.">
-<meta property="og:title" content="Bernardo Dominguez | AI Technical Artist">
-<meta property="og:description" content="Generative content pipelines, AI 3D assets in-engine, AI cinematics and VR. Systems engineer who ships.">
+<title>Bernardo Dominguez | Engineer &amp; AI content creator</title>
+<meta name="description" content="Bernardo Dominguez, systems engineer and AI content creator: brand campaigns and social video, AI films, illustration at scale, game-ready 3D, VR, and the software pipelines behind them. EN · IT · ES.">
+<meta property="og:title" content="Bernardo Dominguez | Engineer &amp; AI content creator">
+<meta property="og:description" content="Campaigns, AI video, illustration, 3D for games and VR, built by an engineer who also writes the pipelines.">
 <meta property="og:image" content="https://berdom-ing.github.io/media/img/og.jpg">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#07080b">
+<link rel="alternate" hreflang="en" href="https://berdom-ing.github.io/?lang=en">
+<link rel="alternate" hreflang="it" href="https://berdom-ing.github.io/?lang=it">
+<link rel="alternate" hreflang="es" href="https://berdom-ing.github.io/?lang=es">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='%23ff5a3c'/><stop offset='1' stop-color='%234fd8ff'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='%2307080b'/><text x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='url(%23g)'>BD</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,35 +26,41 @@
 <nav class="nav" id="nav">
   <a class="brand" href="#top"><span class="dot"></span>Bernardo Dominguez</a>
   <ul>
-    <li><a href="#abyss">3D Assets</a></li>
-    <li><a href="#cinematic">AI Cinematic</a></li>
-    <li><a href="#pipeline">Pipelines</a></li>
-    <li><a href="#motion">Motion</a></li>
-    <li><a href="#xr">Realtime &amp; XR</a></li>
-    <li><a href="#engineering">Engineering</a></li>
-    <li><a href="medical/">Medical imaging ↗</a></li>
+    <li><a href="#work" data-i18n="nav_work">Work</a></li>
+    <li><a href="#campaign" data-i18n="nav_camp">Campaign</a></li>
+    <li><a href="#abyss" data-i18n="nav_3d">3D &amp; games</a></li>
+    <li><a href="#cinematic" data-i18n="nav_film">AI film</a></li>
+    <li><a href="#pipeline" data-i18n="nav_pipe">Pipelines</a></li>
+    <li><a href="#xr">XR</a></li>
+    <li><a href="#experience" data-i18n="nav_cv">CV</a></li>
+    <li><a href="medical/" data-lhref="medical/?lang={l}" data-i18n="nav_med">Medical imaging ↗</a></li>
   </ul>
-  <a class="cta-sm" href="cv/Bernardo-Dominguez-CV.pdf" target="_blank" rel="noopener">Download CV</a>
+  <div class="nav-r">
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="it" aria-pressed="false">IT</button><button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+    <a class="cta-sm" href="cv/Bernardo-Dominguez-CV.pdf" target="_blank" rel="noopener" data-i18n="cv_dl">Download CV</a>
+  </div>
 </nav>
 
 <!-- HERO -->
 <header class="hero" id="top">
-  <video src="media/video/showreel.mp4" poster="media/poster/showreel.webp" autoplay muted loop playsinline preload="auto" aria-label="Showreel: AI 3D assets, AI cinematics, generative illustration, code-drawn animation and VR"></video>
+  <video src="media/video/showreel.mp4" poster="media/poster/showreel.webp" autoplay muted loop playsinline preload="auto" aria-label="Showreel"></video>
   <div class="wrap hero-inner">
-    <span class="eyebrow">Portfolio 2026 · Showreel playing</span>
-    <h1>I turn frontier<br><span class="grad-text">AI models</span> into<br>shippable assets.</h1>
-    <p class="role">AI Technical Artist · Generative Content Pipelines · Realtime 3D &amp; XR</p>
-    <p class="tag">Systems engineer who builds the pipeline <em>and</em> supervises the output: image-to-3D, diffusion, video and emotional TTS models, cleaned up in Blender and shipped inside game engines.</p>
+    <span class="eyebrow" data-i18n="h_eyebrow">Portfolio &amp; CV 2026 · Showreel playing</span>
+    <h1 data-i18n="h_title">Systems engineer.<br><span class="grad-text">AI content creator.</span></h1>
+    <p class="role" data-i18n="h_role">AI Technical Artist · Creative technologist · Software engineer</p>
+    <p class="tag" data-i18n="h_tag">I make content with generative AI, from brand campaigns and social video to films, illustration, game-ready 3D and VR, and I write the software and pipelines behind it, so the quality holds from the first piece to the thousandth.</p>
     <div class="hero-ctas">
-      <a class="btn btn-primary" href="#abyss">See the work ↓</a>
-      <a class="btn btn-ghost" href="cv/Bernardo-Dominguez-CV.pdf" target="_blank" rel="noopener">Download CV</a>
-      <a class="btn btn-ghost" href="mailto:ber.dom.engineer@gmail.com">Contact</a>
+      <a class="btn btn-primary" href="#work" data-i18n="h_see">See the work ↓</a>
+      <a class="btn btn-ghost" href="cv/Bernardo-Dominguez-CV.pdf" target="_blank" rel="noopener" data-i18n="cv_dl">Download CV</a>
+      <a class="btn btn-ghost" href="mailto:ber.dom.engineer@gmail.com" data-i18n="h_contact">Contact</a>
     </div>
     <div class="open-to">
-      <span class="pill live">Open to work</span>
-      <span class="pill">Open to relocate worldwide</span>
+      <span class="pill live" data-i18n="p_open">Open to work</span>
+      <span class="pill" data-i18n="p_reloc">Open to relocate worldwide</span>
       <span class="pill">London · Australia · Remote</span>
-      <span class="pill">EU citizen</span>
+      <span class="pill" data-i18n="p_eu">EU citizen</span>
       <span class="pill">ES · EN · IT</span>
     </div>
   </div>
@@ -61,25 +70,94 @@
 <!-- STATS -->
 <div class="stats">
   <div class="wrap">
-    <div class="stat"><b class="grad-text">1,300+</b><span>AI images generated &amp; curated locally (FLUX.2 / ComfyUI)</span></div>
-    <div class="stat"><b>11</b><span>illustrated audiobooks, end-to-end automated</span></div>
-    <div class="stat"><b>4</b><span>AI-generated 3D assets shipped in a Godot game</span></div>
-    <div class="stat"><b>6</b><span>film-set rooms rebuilt as walkable VR</span></div>
-    <div class="stat"><b>8 GB</b><span>laptop GPU, so every pipeline is engineered to fit</span></div>
+    <div class="stat"><b class="grad-text">1,300+</b><span data-i18n="s1">AI images generated &amp; curated locally (FLUX.2 / ComfyUI)</span></div>
+    <div class="stat"><b>11</b><span data-i18n="s2">illustrated audiobooks, end-to-end automated</span></div>
+    <div class="stat"><b>3</b><span data-i18n="s3">languages for every campaign asset: EN · IT · ES</span></div>
+    <div class="stat"><b>4</b><span data-i18n="s4">AI-generated 3D assets shipped in a Godot game</span></div>
+    <div class="stat"><b>6</b><span data-i18n="s5">film-set rooms rebuilt as walkable VR</span></div>
   </div>
 </div>
 
 <main>
 
-<!-- 01 ABYSS -->
+<!-- WORK INDEX -->
+<section class="block" id="work">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="sec-num" data-i18n="w_num">SELECTED WORK</div>
+        <h2 data-i18n="w_h">Any subject.<br>Any format.</h2>
+      </div>
+      <p data-i18n="w_p">Advertising, film, books, games, virtual worlds and medical software. The subject changes; the method stays the same: clear art direction, the right model for each job, and code that makes the result repeatable. Pick a door.</p>
+    </div>
+    <div class="work-grid">
+      <a class="wk rv" href="#campaign"><img src="media/campaign/tile-campaign.webp" alt="" loading="lazy"><span class="go">↓</span><span class="t"><i data-i18n="wk1_k">Advertising</i><b data-i18n="wk1_t">Brand campaign &amp; social reels</b><span data-i18n="wk1_s">Identity, AI video, ads, email, print</span></span></a>
+      <a class="wk rv" href="work/landing/en.html" data-lhref="work/landing/{l}.html" target="_blank" rel="noopener"><img data-lsrc="media/campaign/landing-{l}.webp" src="media/campaign/landing-en.webp" alt="" loading="lazy"><span class="go">↗</span><span class="t"><i data-i18n="wk2_k">Web</i><b data-i18n="wk2_t">Scroll-story landing page</b><span data-i18n="wk2_s">Live demo, in three languages</span></span></a>
+      <a class="wk rv" href="#cinematic"><img src="media/poster/hf_cinematic.webp" alt="" loading="lazy"><span class="go">↓</span><span class="t"><i data-i18n="wk3_k">AI film</i><b data-i18n="wk3_t">Directed AI cinematic</b><span data-i18n="wk3_s">Storyboard, one character, 15 shots</span></span></a>
+      <a class="wk rv" href="#abyss"><img src="media/poster/turn_cultist.webp" alt="" loading="lazy"><span class="go">↓</span><span class="t"><i data-i18n="wk4_k">Games</i><b data-i18n="wk4_t">Game-ready 3D assets</b><span data-i18n="wk4_s">Image-to-3D, cleaned up and shipped</span></span></a>
+      <a class="wk rv" href="#pipeline"><img src="media/img/zara_scene_008.webp" alt="" loading="lazy"><span class="go">↓</span><span class="t"><i data-i18n="wk5_k">Publishing</i><b data-i18n="wk5_t">Illustration at scale</b><span data-i18n="wk5_s">Consistent characters across 600+ scenes</span></span></a>
+      <a class="wk rv" href="#motion"><img src="media/poster/trex_short.webp" alt="" loading="lazy"><span class="go">↓</span><span class="t"><i data-i18n="wk6_k">Animation</i><b data-i18n="wk6_t">Code-drawn shorts &amp; films</b><span data-i18n="wk6_s">Loops, shorts and full-length explainers</span></span></a>
+      <a class="wk rv" href="#xr"><img src="media/img/vr_03_godot_escalera.webp" alt="" loading="lazy"><span class="go">↓</span><span class="t"><i data-i18n="wk7_k">VR &amp; realtime</i><b data-i18n="wk7_t">Worlds you can walk in</b><span data-i18n="wk7_s">Film frames rebuilt for Meta Quest</span></span></a>
+      <a class="wk rv" href="medical/" data-lhref="medical/?lang={l}"><img src="medical/media/spine.webp" alt="" loading="lazy"><span class="go">↗</span><span class="t"><i data-i18n="wk8_k">Software</i><b data-i18n="wk8_t">Medical imaging engineering</b><span data-i18n="wk8_s">Surgical navigation, registration, 3D Slicer</span></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 01 CAMPAIGN -->
+<section class="block" id="campaign" style="background: var(--bg-2);">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="sec-num" data-i18n="c_num">01 / BRAND CAMPAIGN · WEB · SOCIAL</div>
+        <h2 data-i18n="c_h">From one brief<br>to a whole campaign.</h2>
+      </div>
+      <p data-i18n="c_p">A complete campaign for a private psychology practice, built around a single visual idea: a tangled thread that comes loose when you talk. I did the art direction, the AI footage, the edit, the landing page and every other asset. Each reel is rendered in English, Italian and Spanish: switch the page language and they change.</p>
+    </div>
+
+    <div class="camp-reels">
+      <div class="media zoomable rv" data-lb="media/campaign/reel-hilo-en.mp4" data-llb="media/campaign/reel-hilo-{l}.mp4"><video data-auto src="media/campaign/reel-hilo-en.mp4" poster="media/campaign/reel-hilo-en.webp" data-lsrc="media/campaign/reel-hilo-{l}.mp4" data-lposter="media/campaign/reel-hilo-{l}.webp" muted loop playsinline preload="none"></video></div>
+      <div class="media zoomable rv" data-lb="media/campaign/reel-libreta-en.mp4" data-llb="media/campaign/reel-libreta-{l}.mp4"><video data-auto src="media/campaign/reel-libreta-en.mp4" poster="media/campaign/reel-libreta-en.webp" data-lsrc="media/campaign/reel-libreta-{l}.mp4" data-lposter="media/campaign/reel-libreta-{l}.webp" muted loop playsinline preload="none"></video></div>
+      <div class="media zoomable rv" data-lb="media/campaign/reel-lluvia-en.mp4" data-llb="media/campaign/reel-lluvia-{l}.mp4"><video data-auto src="media/campaign/reel-lluvia-en.mp4" poster="media/campaign/reel-lluvia-en.webp" data-lsrc="media/campaign/reel-lluvia-{l}.mp4" data-lposter="media/campaign/reel-lluvia-{l}.webp" muted loop playsinline preload="none"></video></div>
+      <div class="media zoomable rv" data-lb="media/campaign/reel-landing-en.mp4" data-llb="media/campaign/reel-landing-{l}.mp4"><video data-auto src="media/campaign/reel-landing-en.mp4" poster="media/campaign/reel-landing-en.webp" data-lsrc="media/campaign/reel-landing-{l}.mp4" data-lposter="media/campaign/reel-landing-{l}.webp" muted loop playsinline preload="none"></video></div>
+    </div>
+    <p class="camp-cap" data-i18n="c_cap">9:16 reels for Instagram and TikTok · AI video, typography and end cards composited in code · click any reel to watch it larger</p>
+
+    <div class="camp-web">
+      <a class="browser rv" href="work/landing/en.html" data-lhref="work/landing/{l}.html" target="_blank" rel="noopener">
+        <div class="bar"><i></i><i></i><i></i><span data-i18n="c_url">landing page · live demo</span></div>
+        <img src="media/campaign/landing-en.webp" data-lsrc="media/campaign/landing-{l}.webp" alt="Illustrated landing page: a psychologist listens while a man's tangled thought slowly comes loose" loading="lazy">
+      </a>
+      <div class="note rv">
+        <b data-i18n="c_web_h">The landing page tells the story as you scroll</b>
+        <p data-i18n="c_web_p">An illustrated scene animates with the scroll: a man alone with a tangled thought, a first conversation, the thread pulled straight. It ends in a booking form that writes a ready-to-send WhatsApp message. Hand-coded, one file, no framework, designed for phones first.</p>
+        <ul class="deliv">
+          <li><span data-i18n="d1">Visual identity</span><span data-i18n="d1v">palette · type · motif</span></li>
+          <li><span data-i18n="d2">Social reels</span><span data-i18n="d2v">4 × 3 languages</span></li>
+          <li><span data-i18n="d3">Paid ads</span><span data-i18n="d3v">5 formats</span></li>
+          <li><span data-i18n="d4">Email newsletter</span><span>HTML</span></li>
+          <li><span data-i18n="d5">Print</span><span data-i18n="d5v">QR review card</span></li>
+        </ul>
+        <a class="btn btn-ghost" href="work/landing/en.html" data-lhref="work/landing/{l}.html" target="_blank" rel="noopener" data-i18n="c_open">Open the live demo ↗</a>
+      </div>
+    </div>
+
+    <div class="hf-notes">
+      <div class="note rv"><b data-i18n="cn1_h">Art direction first</b><p data-i18n="cn1_p">One motif, one palette and one type pairing carried through every format, so a reel, a banner and the website read as the same brand.</p></div>
+      <div class="note rv"><b data-i18n="cn2_h">AI footage, directed</b><p data-i18n="cn2_p">Text-to-video for mood and reference-to-video for exact motion, with a physics simulation in Blender as the reference. Every clip is reviewed frame by frame before it reaches the edit.</p></div>
+      <div class="note rv"><b data-i18n="cn3_h">Any language, one command</b><p data-i18n="cn3_p">Copy, overlays and end cards are generated from code, so a new language or a new line is a re-render, not a redesign. Exports play everywhere, from TikTok to WhatsApp.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 ABYSS -->
 <section class="block" id="abyss">
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <div class="sec-num">01 / AI 3D ASSETS → GAME ENGINE</div>
+        <div class="sec-num" data-i18n="a_num">02 / AI 3D ASSETS → GAME ENGINE</div>
         <h2>Look the Abyss</h2>
       </div>
-      <p>A first-person horror game I designed and built in Godot 4. The hero props and characters were generated with AI image-to-3D, then cleaned up, decimated and re-lit in Blender, and shipped with a PS1-style render pipeline. <strong>Drag the model to rotate it.</strong></p>
+      <p data-i18n="a_p">A first-person horror game I designed and built in Godot 4. The hero props and characters were generated with AI image-to-3D, then cleaned up, decimated and re-lit in Blender, and shipped with a PS1-style render pipeline. <strong>Drag the model to rotate it.</strong></p>
     </div>
 
     <div class="abyss-top">
@@ -93,22 +171,22 @@
           <span class="vinfo" id="mvinfo">Cultist · 452k → 50k tris for web · 1K PBR</span>
         </div>
         <div class="model-tabs" id="mtabs">
-          <button class="on" data-src="media/models/cultist.glb" data-info="Cultist · 452k → 50k tris for web · 1K PBR" data-orbit="25deg 80deg 5.2m">Cultist</button>
-          <button data-src="media/models/shop_cart.glb" data-info="Merchant cart · 6.3k tris · 1K PBR" data-orbit="35deg 74deg 6m">Merchant cart</button>
-          <button data-src="media/models/slenderman.glb" data-info="Faceless stalker · 2.3k tris · 1K PBR" data-orbit="20deg 82deg 6.6m">Stalker</button>
-          <button data-src="media/models/speedrun_stand.glb" data-info="Speedrun board · 1.3k tris · 1K PBR" data-orbit="25deg 80deg 5.2m">Signpost</button>
+          <button class="on" data-src="media/models/cultist.glb" data-info="Cultist · 452k → 50k tris for web · 1K PBR" data-orbit="25deg 80deg 5.2m" data-i18n="m1">Cultist</button>
+          <button data-src="media/models/shop_cart.glb" data-info="Merchant cart · 6.3k tris · 1K PBR" data-orbit="35deg 74deg 6m" data-i18n="m2">Merchant cart</button>
+          <button data-src="media/models/slenderman.glb" data-info="Faceless stalker · 2.3k tris · 1K PBR" data-orbit="20deg 82deg 6.6m" data-i18n="m3">Stalker</button>
+          <button data-src="media/models/speedrun_stand.glb" data-info="Speedrun board · 1.3k tris · 1K PBR" data-orbit="25deg 80deg 5.2m" data-i18n="m4">Signpost</button>
         </div>
       </div>
 
       <div class="pipe rv">
-        <h3>From prompt to playable</h3>
-        <p>The pipeline I ran for every asset, and the decisions a supervisor makes at each step.</p>
+        <h3 data-i18n="a_ph">From prompt to playable</h3>
+        <p data-i18n="a_pp">The pipeline I ran for every asset, and the decisions a supervisor makes at each step.</p>
         <ol class="steps">
-          <li><b>Concept &amp; art direction</b><span>Written art guide with prompts, palette and a shared style suffix, so every generator stays on one look.</span></li>
-          <li><b>AI image-to-3D</b><span>Concept image to a textured mesh with base-colour, metal-rough and normal maps, judged on silhouette and readability.</span></li>
-          <li><b>Blender clean-up</b><span>Re-centre pivots, fix scale and orientation, decimate (450k → 50k tris), downscale textures for the target.</span></li>
-          <li><b>In-engine integration</b><span>Godot 4 import, collisions, idle "breathing" animation in code, low render scale + film-grain shader for the PS1 look.</span></li>
-          <li><b>Audio &amp; 2D with AI</b><span>AI-assisted ambience, stingers and 2D art, wired to gameplay states (sanity, stare, chase).</span></li>
+          <li><b data-i18n="a1h">Concept &amp; art direction</b><span data-i18n="a1p">Written art guide with prompts, palette and a shared style suffix, so every generator stays on one look.</span></li>
+          <li><b data-i18n="a2h">AI image-to-3D</b><span data-i18n="a2p">Concept image to a textured mesh with base-colour, metal-rough and normal maps, judged on silhouette and readability.</span></li>
+          <li><b data-i18n="a3h">Blender clean-up</b><span data-i18n="a3p">Re-centre pivots, fix scale and orientation, decimate (450k → 50k tris), downscale textures for the target.</span></li>
+          <li><b data-i18n="a4h">In-engine integration</b><span data-i18n="a4p">Godot 4 import, collisions, idle "breathing" animation in code, low render scale + film-grain shader for the PS1 look.</span></li>
+          <li><b data-i18n="a5h">Audio &amp; 2D with AI</b><span data-i18n="a5p">AI-assisted ambience, stingers and 2D art, wired to gameplay states (sanity, stare, chase).</span></li>
         </ol>
         <div class="tags">
           <span class="tag-chip">Godot 4.7</span><span class="tag-chip">GDScript</span><span class="tag-chip">Blender</span><span class="tag-chip">Image-to-3D</span><span class="tag-chip">PBR</span><span class="tag-chip">Shaders</span><span class="tag-chip">Unit tests</span><span class="tag-chip">EN / ES localisation</span>
@@ -119,20 +197,20 @@
     <div class="engine-grid">
       <div class="media wide zoomable rv" data-lb="media/video/game_cultist_ring.mp4">
         <video data-auto src="media/video/game_cultist_ring.mp4" poster="media/poster/game_cultist_ring.webp" muted loop playsinline preload="none"></video>
-        <span class="badge">In-engine capture</span>
-        <div class="cap"><b>The ring of cultists</b>AI-generated cultists spawn around the abyss with code-driven idle breathing.</div>
+        <span class="badge" data-i18n="g_cap">In-engine capture</span>
+        <div class="cap"><b data-i18n="g1h">The ring of cultists</b><span data-i18n="g1p">AI-generated cultists spawn around the abyss with code-driven idle breathing.</span></div>
       </div>
       <div class="media zoomable rv" data-lb="media/video/game_cultist_close.mp4">
         <video data-auto src="media/video/game_cultist_close.mp4" poster="media/poster/game_cultist_close.webp" muted loop playsinline preload="none"></video>
-        <span class="badge">In-engine</span>
+        <span class="badge" data-i18n="g2">In-engine</span>
       </div>
       <div class="media zoomable rv" data-lb="media/video/game_slender.mp4">
         <video data-auto src="media/video/game_slender.mp4" poster="media/poster/game_slender.webp" muted loop playsinline preload="none"></video>
-        <span class="badge">Chase mini-game</span>
+        <span class="badge" data-i18n="g3">Chase mini-game</span>
       </div>
       <div class="media zoomable rv" data-lb="media/video/game_shop_cart.mp4">
         <video data-auto src="media/video/game_shop_cart.mp4" poster="media/poster/game_shop_cart.webp" muted loop playsinline preload="none"></video>
-        <span class="badge">Shop</span>
+        <span class="badge" data-i18n="g4">Shop</span>
       </div>
       <div class="media zoomable rv" data-lb="media/video/game_hub_wide.mp4">
         <video data-auto src="media/video/game_hub_wide.mp4" poster="media/poster/game_hub_wide.webp" muted loop playsinline preload="none"></video>
@@ -141,7 +219,7 @@
     </div>
 
     <div class="turn-row">
-      <div class="media rv"><video data-auto src="media/video/turn_cultist.mp4" poster="media/poster/turn_cultist.webp" muted loop playsinline preload="none"></video><span class="badge">Blender turntable</span></div>
+      <div class="media rv"><video data-auto src="media/video/turn_cultist.mp4" poster="media/poster/turn_cultist.webp" muted loop playsinline preload="none"></video><span class="badge" data-i18n="g5">Blender turntable</span></div>
       <div class="media rv"><video data-auto src="media/video/turn_shop_cart.mp4" poster="media/poster/turn_shop_cart.webp" muted loop playsinline preload="none"></video></div>
       <div class="media rv"><video data-auto src="media/video/turn_slenderman.mp4" poster="media/poster/turn_slenderman.webp" muted loop playsinline preload="none"></video></div>
       <div class="media rv"><video data-auto src="media/video/turn_speedrun_stand.mp4" poster="media/poster/turn_speedrun_stand.webp" muted loop playsinline preload="none"></video></div>
@@ -149,67 +227,67 @@
   </div>
 </section>
 
-<!-- 02 HIGGSFIELD -->
+<!-- 03 HIGGSFIELD -->
 <section class="block" id="cinematic" style="background: var(--bg-2);">
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <div class="sec-num">02 / AI VIDEO · HIGGSFIELD</div>
-        <h2>The mask in the drawer</h2>
+        <div class="sec-num" data-i18n="f_num">03 / AI VIDEO · HIGGSFIELD</div>
+        <h2 data-i18n="f_h">The mask in the drawer</h2>
       </div>
-      <p>A 15-shot vertical cinematic made in Higgsfield. I first built my own animation template in Higgsfield, then directed the piece from it: a shot-by-shot storyboard, one consistent character, and camera language (dolly zoom, push-ins, rack light) planned before generating.</p>
+      <p data-i18n="f_p">A 15-shot vertical cinematic made in Higgsfield. I first built my own animation template in Higgsfield, then directed the piece from it: a shot-by-shot storyboard, one consistent character, and camera language (dolly zoom, push-ins, rack light) planned before generating.</p>
     </div>
     <div class="hf">
       <div class="media board zoomable rv" data-lb="media/img/hf_storyboard.webp">
         <img src="media/img/hf_storyboard.webp" alt="15-panel storyboard: a sheeted ghost walks a hotel corridor, a man hides a sad drama mask in a drawer, then sits before a wall of static TVs and smiles" loading="lazy">
-        <span class="badge">Storyboard · 15 shots</span>
+        <span class="badge" data-i18n="f_sb">Storyboard · 15 shots</span>
       </div>
       <div class="media phone rv">
         <video id="hfv" data-auto src="media/video/hf_cinematic.mp4" poster="media/poster/hf_cinematic.webp" muted loop playsinline preload="none"></video>
-        <button class="unmute" data-target="hfv">🔊 Sound on</button>
+        <button class="unmute" data-target="hfv" data-i18n="snd_on">🔊 Sound on</button>
       </div>
     </div>
     <div class="hf-notes">
-      <div class="note rv"><b>Template first</b><p>A reusable animation template means the next piece starts from a proven look and motion style, not from zero.</p></div>
-      <div class="note rv"><b>Directed, not rolled</b><p>Every shot has an intent written down (framing, motion, emotion) before generating, which is how I keep the character and the light consistent.</p></div>
-      <div class="note rv"><b>Built for social</b><p>9:16, 15 s, hook in the first second. The same storyboard can be re-rendered as 16:9 for trailers.</p></div>
+      <div class="note rv"><b data-i18n="f1h">Template first</b><p data-i18n="f1p">A reusable animation template means the next piece starts from a proven look and motion style, not from zero.</p></div>
+      <div class="note rv"><b data-i18n="f2h">Directed, not rolled</b><p data-i18n="f2p">Every shot has an intent written down (framing, motion, emotion) before generating, which is how I keep the character and the light consistent.</p></div>
+      <div class="note rv"><b data-i18n="f3h">Built for social</b><p data-i18n="f3p">9:16, 15 s, hook in the first second. The same storyboard can be re-rendered as 16:9 for trailers.</p></div>
     </div>
   </div>
 </section>
 
-<!-- 03 PIPELINE -->
+<!-- 04 PIPELINE -->
 <section class="block" id="pipeline">
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <div class="sec-num">03 / GENERATIVE PIPELINE ENGINEERING</div>
-        <h2>One text file in.<br>A finished film out.</h2>
+        <div class="sec-num" data-i18n="pl_num">04 / GENERATIVE PIPELINE ENGINEERING</div>
+        <h2 data-i18n="pl_h">One text file in.<br>A finished film out.</h2>
       </div>
-      <p>I packaged a fully automated illustrated-audiobook pipeline as a reusable Claude Code skill: give it a <span class="mono">.txt</span> and it designs a narrator voice, narrates with emotion, plans the scenes, generates consistent characters and renders the final video, all on a single 8 GB laptop GPU.</p>
+      <p data-i18n="pl_p">I packaged a fully automated illustrated-audiobook pipeline as a reusable Claude Code skill: give it a <span class="mono">.txt</span> and it designs a narrator voice, narrates with emotion, plans the scenes, generates consistent characters and renders the final video, all on a single 8 GB laptop GPU.</p>
     </div>
 
     <div class="flow rv">
-      <div class="node"><i>01 · text</i><b>Clean &amp; split</b><span>PDF/EPUB line-break repair, chapters, 10-min parts</span></div>
-      <div class="node hot"><i>02 · voice</i><b>Qwen3-TTS</b><span>Designed narrator voice, cloned for consistency, emotion via instructions</span></div>
-      <div class="node"><i>03 · timing</i><b>Whisper</b><span>Word-level timestamps drive cuts and captions</span></div>
-      <div class="node"><i>04 · planning</i><b>Scene planner</b><span>LLM writes a shot list + character &amp; location bible</span></div>
-      <div class="node hot"><i>05 · image</i><b>FLUX.2 klein · ComfyUI</b><span>References first, then scenes, with a VRAM guard so nothing spills off the GPU</span></div>
-      <div class="node"><i>06 · edit</i><b>Motion &amp; master</b><span>Camera moves, transitions, ffmpeg master in 720p / 1080p</span></div>
+      <div class="node"><i data-i18n="n1i">01 · text</i><b data-i18n="n1b">Clean &amp; split</b><span data-i18n="n1s">PDF/EPUB line-break repair, chapters, 10-min parts</span></div>
+      <div class="node hot"><i data-i18n="n2i">02 · voice</i><b>Qwen3-TTS</b><span data-i18n="n2s">Designed narrator voice, cloned for consistency, emotion via instructions</span></div>
+      <div class="node"><i data-i18n="n3i">03 · timing</i><b>Whisper</b><span data-i18n="n3s">Word-level timestamps drive cuts and captions</span></div>
+      <div class="node"><i data-i18n="n4i">04 · planning</i><b data-i18n="n4b">Scene planner</b><span data-i18n="n4s">LLM writes a shot list + character &amp; location bible</span></div>
+      <div class="node hot"><i data-i18n="n5i">05 · image</i><b>FLUX.2 klein · ComfyUI</b><span data-i18n="n5s">References first, then scenes, with a VRAM guard so nothing spills off the GPU</span></div>
+      <div class="node"><i data-i18n="n6i">06 · edit</i><b data-i18n="n6b">Motion &amp; master</b><span data-i18n="n6s">Camera moves, transitions, ffmpeg master in 720p / 1080p</span></div>
     </div>
 
-    <div class="consist-label rv"><h3>Character consistency, photoreal</h3><span>Reference sheet → the same man across 600+ scenes</span></div>
+    <div class="consist-label rv"><h3 data-i18n="cs1h">Character consistency, photoreal</h3><span data-i18n="cs1s">Reference sheet → the same man across 600+ scenes</span></div>
     <div class="consist">
-      <div class="media ref zoomable rv" data-lb="media/img/extr_CHAR_001_meursault.webp"><img src="media/img/extr_CHAR_001_meursault.webp" alt="Character reference: man in a grey suit" loading="lazy"><span class="badge">Reference</span></div>
+      <div class="media ref zoomable rv" data-lb="media/img/extr_CHAR_001_meursault.webp"><img src="media/img/extr_CHAR_001_meursault.webp" alt="Character reference: man in a grey suit" loading="lazy"><span class="badge" data-i18n="ref">Reference</span></div>
       <div class="media zoomable rv" data-lb="media/img/extr_scene_093.webp"><img src="media/img/extr_scene_093.webp" alt="The same man sitting on a bed in a sunlit room" loading="lazy"></div>
       <div class="media zoomable rv" data-lb="media/img/extr_scene_425.webp"><img src="media/img/extr_scene_425.webp" alt="The same man standing in a sunlit cell" loading="lazy"></div>
       <div class="media zoomable rv" data-lb="media/img/extr_scene_379.webp"><img src="media/img/extr_scene_379.webp" alt="The same man in a prison cell" loading="lazy"></div>
       <div class="media zoomable rv" data-lb="media/img/extr_scene_008.webp"><img src="media/img/extr_scene_008.webp" alt="Two men laughing on a bus" loading="lazy"></div>
     </div>
 
-    <div class="consist-label rv"><h3>Same pipeline, painterly style</h3><span>Oil painting + pointillism, 130 scenes</span></div>
+    <div class="consist-label rv"><h3 data-i18n="cs2h">Same pipeline, painterly style</h3><span data-i18n="cs2s">Oil painting + pointillism, 130 scenes</span></div>
     <div class="consist">
-      <div class="media ref zoomable rv" data-lb="media/img/zara_CHAR_001_zaratustra.webp"><img src="media/img/zara_CHAR_001_zaratustra.webp" alt="Character reference: robed prophet with a staff, oil painting" loading="lazy"><span class="badge">Reference</span></div>
-      <div class="media zoomable rv" data-lb="media/img/zara_scene_008.webp"><img src="media/img/zara_scene_008.webp" alt="Two lions on desert dunes at sunrise" loading="lazy"></div>
+      <div class="media ref zoomable rv" data-lb="media/img/zara_CHAR_001_zaratustra.webp"><img src="media/img/zara_CHAR_001_zaratustra.webp" alt="Character reference: robed prophet with a staff, oil painting" loading="lazy"><span class="badge" data-i18n="ref">Reference</span></div>
+      <div class="media zoomable rv" data-lb="media/img/zara_scene_016.webp"><img src="media/img/zara_scene_016.webp" alt="Painterly scene from the same book" loading="lazy"></div>
       <div class="media zoomable rv" data-lb="media/img/zara_scene_083.webp"><img src="media/img/zara_scene_083.webp" alt="Tightrope walker between two medieval towers" loading="lazy"></div>
       <div class="media zoomable rv" data-lb="media/img/zara_scene_064.webp"><img src="media/img/zara_scene_064.webp" alt="Man by a stone tomb under the moon" loading="lazy"></div>
       <div class="media zoomable rv" data-lb="media/img/zara_scene_118.webp"><img src="media/img/zara_scene_118.webp" alt="Man in a golden wheat field" loading="lazy"></div>
@@ -221,59 +299,59 @@
   </div>
 </section>
 
-<!-- 04 MOTION -->
+<!-- 05 MOTION -->
 <section class="block" id="motion" style="background: var(--bg-2);">
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <div class="sec-num">04 / CODE-DRAWN ANIMATION</div>
-        <h2>Loops, shorts and films.<br>Zero hand-drawn frames.</h2>
+        <div class="sec-num" data-i18n="mo_num">05 / CODE-DRAWN ANIMATION</div>
+        <h2 data-i18n="mo_h">Loops, shorts and films.<br>Zero hand-drawn frames.</h2>
       </div>
-      <p>Vertical loops and shorts for social, plus long-form animated explainers where every frame is drawn by code (SVG / canvas + GSAP, rendered with Hyperframes) that I directed with Claude Code. Each book got its own visual bible: mid-century cartoon, illuminated manuscript, cut-paper collage, risograph ink, woodblock print and more, each one a full-length video.</p>
+      <p data-i18n="mo_p">Vertical loops and shorts for social, plus long-form animated explainers where every frame is drawn by code (SVG / canvas + GSAP, rendered with Hyperframes) that I directed with Claude Code. Each book got its own visual bible: mid-century cartoon, illuminated manuscript, cut-paper collage, risograph ink, woodblock print and more, each one a full-length video.</p>
     </div>
     <div class="shorts">
       <div class="media v zoomable rv" data-lb="media/video/crayon_ghost.mp4">
         <video data-auto src="media/video/crayon_ghost.mp4" poster="media/poster/crayon_ghost.webp" muted loop playsinline preload="none"></video>
-        <span class="badge">Seamless loop</span>
+        <span class="badge" data-i18n="mo_loop">Seamless loop</span>
       </div>
       <div class="media v zoomable rv" data-lb="media/video/trex_short.mp4">
         <video id="trexv" data-auto src="media/video/trex_short.mp4" poster="media/poster/trex_short.webp" muted loop playsinline preload="none"></video>
-        <button class="unmute" data-target="trexv">🔊 Sound on</button>
-        <span class="badge">18 s short</span>
+        <button class="unmute" data-target="trexv" data-i18n="snd_on">🔊 Sound on</button>
+        <span class="badge" data-i18n="mo_18">18 s short</span>
       </div>
       <div class="note rv">
-        <b>Shorts &amp; loops</b>
-        <p><strong>Crayon ghost:</strong> a seamless 8-second hand-crayon-style loop built with Claude Code. Made to sit as an idle animation or a social loop.</p>
-        <p style="margin-top:10px"><strong>Rex Dentium:</strong> an 18-second vertical piece with a Droste "helix of fangs" zoom, rendered from a single seek-safe canvas function, with every roar and rumble synthesized in code.</p>
-        <div class="tags"><span class="tag-chip">Canvas 2D</span><span class="tag-chip">GSAP</span><span class="tag-chip">Hyperframes</span><span class="tag-chip">Procedural audio</span><span class="tag-chip">9:16</span></div>
+        <b data-i18n="mo_nh">Shorts &amp; loops</b>
+        <p data-i18n="mo_n1"><strong>Crayon ghost:</strong> a seamless 8-second hand-crayon-style loop built with Claude Code. Made to sit as an idle animation or a social loop.</p>
+        <p style="margin-top:10px" data-i18n="mo_n2"><strong>Rex Dentium:</strong> an 18-second vertical piece with a Droste "helix of fangs" zoom, rendered from a single seek-safe canvas function, with every roar and rumble synthesized in code.</p>
+        <div class="tags"><span class="tag-chip">Canvas 2D</span><span class="tag-chip">GSAP</span><span class="tag-chip">Hyperframes</span><span class="tag-chip" data-i18n="mo_audio">Procedural audio</span><span class="tag-chip">9:16</span></div>
       </div>
     </div>
 
     <div class="styles two">
-      <div class="media zoomable rv" data-lb="media/video/cd_recupera_b.mp4"><video data-auto src="media/video/cd_recupera_b.mp4" poster="media/poster/cd_recupera_b.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Cut-paper collage</b>Attention &amp; dopamine</div></div>
-      <div class="media zoomable rv" data-lb="media/video/cd_vitamina_a.mp4"><video data-auto src="media/video/cd_vitamina_a.mp4" poster="media/poster/cd_vitamina_a.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Warm dusk editorial</b>Rooftop under string lights</div></div>
+      <div class="media zoomable rv" data-lb="media/video/cd_caballero_b.mp4"><video data-auto src="media/video/cd_caballero_b.mp4" poster="media/poster/cd_caballero_b.webp" muted loop playsinline preload="none"></video><div class="cap"><b data-i18n="mo_s1h">Storybook castle</b><span data-i18n="mo_s1p">The knight and the dragon</span></div></div>
+      <div class="media zoomable rv" data-lb="media/video/cd_vitamina_a.mp4"><video data-auto src="media/video/cd_vitamina_a.mp4" poster="media/poster/cd_vitamina_a.webp" muted loop playsinline preload="none"></video><div class="cap"><b data-i18n="mo_s2h">Warm dusk editorial</b><span data-i18n="mo_s2p">Rooftop under string lights</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- 05 XR -->
+<!-- 06 XR -->
 <section class="block" id="xr">
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <div class="sec-num">05 / REALTIME 3D &amp; XR</div>
-        <h2>From film frames<br>to a room you can walk in.</h2>
+        <div class="sec-num" data-i18n="x_num">06 / REALTIME 3D &amp; XR</div>
+        <h2 data-i18n="x_h">From film frames<br>to a room you can walk in.</h2>
       </div>
-      <p>A personal study: rebuilding six interiors and exteriors of a 1990s New York film as a VR experience for Meta Quest. Camera poses and geometry were recovered from movie frames, rebuilt in Blender, lightmap-baked and shipped as a Godot OpenXR app with teleport, physical hands and grabbable props.</p>
+      <p data-i18n="x_p">A personal study: rebuilding six interiors and exteriors of a 1990s New York film as a VR experience for Meta Quest. Camera poses and geometry were recovered from movie frames, rebuilt in Blender, lightmap-baked and shipped as a Godot OpenXR app with teleport, physical hands and grabbable props.</p>
     </div>
     <div class="xr-flow">
-      <div class="rv"><div class="media zoomable" data-lb="media/img/vr_01_nube_importada_aerea.webp"><img src="media/img/vr_01_nube_importada_aerea.webp" alt="Sparse point cloud recovered from film frames" loading="lazy"></div><div class="step-cap"><i>01</i><b>Structure from motion</b><span>Person masks with YOLO, COLMAP with ALIKED + LightGlue, VGGT for single shots</span></div></div>
-      <div class="rv"><div class="media zoomable" data-lb="media/img/vr_02_blockout_con_nube_aerea.webp"><img src="media/img/vr_02_blockout_con_nube_aerea.webp" alt="Room blockout aligned to the point cloud" loading="lazy"></div><div class="step-cap"><i>02</i><b>Measured blockout</b><span>Scale from known objects, walls and windows fitted with RANSAC, scripted in Blender</span></div></div>
-      <div class="rv"><div class="media zoomable" data-lb="media/img/vr_08_v3_aerea.webp"><img src="media/img/vr_08_v3_aerea.webp" alt="Fully textured and furnished apartment, aerial cutaway" loading="lazy"></div><div class="step-cap"><i>03</i><b>Look-dev</b><span>CC0 PBR + textures matched to 4K frames, lightmaps baked on GPU</span></div></div>
-      <div class="rv"><div class="media zoomable" data-lb="media/img/vr_01_godot_teletransporte.webp"><img src="media/img/vr_01_godot_teletransporte.webp" alt="In-headset view with teleport arc" loading="lazy"></div><div class="step-cap"><i>04</i><b>In the headset</b><span>Godot 4 OpenXR on Quest via ALVR: teleport, physical hands, grab &amp; throw</span></div></div>
+      <div class="rv"><div class="media zoomable" data-lb="media/img/vr_01_nube_importada_aerea.webp"><img src="media/img/vr_01_nube_importada_aerea.webp" alt="Sparse point cloud recovered from film frames" loading="lazy"></div><div class="step-cap"><i>01</i><b data-i18n="x1h">Structure from motion</b><span data-i18n="x1p">Person masks with YOLO, COLMAP with ALIKED + LightGlue, VGGT for single shots</span></div></div>
+      <div class="rv"><div class="media zoomable" data-lb="media/img/vr_02_blockout_con_nube_aerea.webp"><img src="media/img/vr_02_blockout_con_nube_aerea.webp" alt="Room blockout aligned to the point cloud" loading="lazy"></div><div class="step-cap"><i>02</i><b data-i18n="x2h">Measured blockout</b><span data-i18n="x2p">Scale from known objects, walls and windows fitted with RANSAC, scripted in Blender</span></div></div>
+      <div class="rv"><div class="media zoomable" data-lb="media/img/vr_08_v3_aerea.webp"><img src="media/img/vr_08_v3_aerea.webp" alt="Fully textured and furnished apartment, aerial cutaway" loading="lazy"></div><div class="step-cap"><i>03</i><b>Look-dev</b><span data-i18n="x3p">CC0 PBR + textures matched to 4K frames, lightmaps baked on GPU</span></div></div>
+      <div class="rv"><div class="media zoomable" data-lb="media/img/vr_01_godot_teletransporte.webp"><img src="media/img/vr_01_godot_teletransporte.webp" alt="In-headset view with teleport arc" loading="lazy"></div><div class="step-cap"><i>04</i><b data-i18n="x4h">In the headset</b><span data-i18n="x4p">Godot 4 OpenXR on Quest via ALVR: teleport, physical hands, grab &amp; throw</span></div></div>
     </div>
     <div class="gallery">
-      <div class="media big zoomable rv" data-lb="media/img/vr_03_godot_escalera.webp"><img src="media/img/vr_03_godot_escalera.webp" alt="Stairwell with ornate iron railings" loading="lazy"><div class="cap"><b>9-storey stairwell</b>Godot capture</div></div>
+      <div class="media big zoomable rv" data-lb="media/img/vr_03_godot_escalera.webp"><img src="media/img/vr_03_godot_escalera.webp" alt="Stairwell with ornate iron railings" loading="lazy"><div class="cap"><b data-i18n="x_st">9-storey stairwell</b><span data-i18n="x_gc">Godot capture</span></div></div>
       <div class="media zoomable rv" data-lb="media/img/vr_01_godot_comedor.webp"><img src="media/img/vr_01_godot_comedor.webp" alt="Dining room with dark sideboard and table" loading="lazy"></div>
       <div class="media zoomable rv" data-lb="media/img/vr_09_godot_v3_salon_foto927.webp"><img src="media/img/vr_09_godot_v3_salon_foto927.webp" alt="Living room with window, CRT TV and plant" loading="lazy"></div>
       <div class="media zoomable rv" data-lb="media/img/vr_05_godot_interior.webp"><img src="media/img/vr_05_godot_interior.webp" alt="Corner grocery store interior with full shelves" loading="lazy"></div>
@@ -283,31 +361,31 @@
     </div>
 
     <div class="pet-text rv">
-      <h3>A desktop pet that walks across your screen, and into VR.</h3>
-      <p>Godot 4 app that imports any glTF / FBX / VRM character at runtime and retargets animations between rigs it has never seen (humanoids, dogs, cats) by topology, not bone names. VRM expressions and spring-bone hair, toon shading with soft PCSS shadows on a transparent window, adaptive GPU quality tiers, and a Quest mode with mixed-reality passthrough where you can pet it and pick it up.</p>
+      <h3 data-i18n="pet_h">A desktop pet that walks across your screen, and into VR.</h3>
+      <p data-i18n="pet_p">Godot 4 app that imports any glTF / FBX / VRM character at runtime and retargets animations between rigs it has never seen (humanoids, dogs, cats) by topology, not bone names. VRM expressions and spring-bone hair, toon shading with soft PCSS shadows on a transparent window, adaptive GPU quality tiers, and a Quest mode with mixed-reality passthrough where you can pet it and pick it up.</p>
     </div>
     <div class="pet">
-      <div class="media zoomable rv" data-lb="media/video/rt_retarget.mp4"><video data-auto src="media/video/rt_retarget.mp4" poster="media/poster/rt_retarget.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Cross-rig retargeting</b>Mixamo → mocap BVH → quadruped, live</div></div>
-      <div class="media zoomable rv" data-lb="media/video/rt_vroid.mp4"><video data-auto src="media/video/rt_vroid.mp4" poster="media/poster/rt_vroid.webp" muted loop playsinline preload="none"></video><div class="cap"><b>VRM characters</b>Expressions + spring-bone physics</div></div>
+      <div class="media zoomable rv" data-lb="media/video/rt_retarget.mp4"><video data-auto src="media/video/rt_retarget.mp4" poster="media/poster/rt_retarget.webp" muted loop playsinline preload="none"></video><div class="cap"><b data-i18n="pet1h">Cross-rig retargeting</b><span data-i18n="pet1p">Mixamo → mocap BVH → quadruped, live</span></div></div>
+      <div class="media zoomable rv" data-lb="media/video/rt_vroid.mp4"><video data-auto src="media/video/rt_vroid.mp4" poster="media/poster/rt_vroid.webp" muted loop playsinline preload="none"></video><div class="cap"><b data-i18n="pet2h">VRM characters</b><span data-i18n="pet2p">Expressions + spring-bone physics</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- 06 ENGINEERING -->
+<!-- 07 ENGINEERING -->
 <section class="block" id="engineering" style="background: var(--bg-2);">
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <div class="sec-num">06 / THE ENGINEERING BEHIND IT</div>
-        <h2>I also ship production software.</h2>
+        <div class="sec-num" data-i18n="e_num">07 / SOFTWARE ENGINEERING</div>
+        <h2 data-i18n="e_h">I also ship production software.</h2>
       </div>
-      <p>My day job is software that cannot fail: surgical planning and navigation. That is where the pipeline discipline comes from: tests, reproducibility and validating every output before it reaches a user.</p>
+      <p data-i18n="e_p">My day job is software that cannot fail: surgical planning and navigation. That is where the pipeline discipline comes from: tests, reproducibility and validating every output before it reaches a user.</p>
     </div>
     <div class="cards">
-      <div class="card rv"><span class="k">Medical device client · under NDA</span><h3>Surgical planning &amp; navigation</h3><p>3D Slicer product in Python / C++: CT segmentation, 3D-printable surgical guides, real-time tracked navigation, and a new GPU-accelerated X-ray-to-CT registration module with device calibration, live video capture and a simulator for offline validation.</p><a class="more" href="medical/">Medical imaging portfolio →</a></div>
-      <div class="card rv"><span class="k">Open source · sole author</span><h3>SlicerSPINEPS</h3><p>Deep-learning whole-spine segmentation (nnU-Net / PyTorch) inside 3D Slicer, with a one-click CUDA installer that matches the user's NVIDIA driver. Submitted to the official Extensions Index.</p><a class="more" href="https://github.com/BerDom-Ing" target="_blank" rel="noopener">GitHub →</a></div>
-      <div class="card rv"><span class="k">Queen's University · hosted by Kitware</span><h3>Slicer telemetry platform</h3><p>Privacy-first usage analytics for 3D Slicer: Qt extension, Flask backend on AWS and a D3.js / Crossfilter dashboard, now live at slicer-telemetry.kitware.com.</p><a class="more" href="https://slicer-telemetry.kitware.com" target="_blank" rel="noopener">Live dashboard →</a></div>
-      <div class="card rv"><span class="k">Own product · in daily use</span><h3>Rental finance app</h3><p>One Python codebase shipped as an Android APK and as a web app running Python in the browser (Pyodide), on Cloudflare Pages with a Supabase / PostgreSQL backend and row-level security.</p></div>
+      <div class="card rv"><span class="k" data-i18n="e1k">Medical device client · under NDA</span><h3 data-i18n="e1h">Surgical planning &amp; navigation</h3><p data-i18n="e1p">3D Slicer product in Python / C++: CT segmentation, 3D-printable surgical guides, real-time tracked navigation, and a new GPU-accelerated X-ray-to-CT registration module with device calibration, live video capture and a simulator for offline validation.</p><a class="more" href="medical/" data-lhref="medical/?lang={l}" data-i18n="e1a">Medical imaging portfolio →</a></div>
+      <div class="card rv"><span class="k" data-i18n="e2k">Open source · sole author</span><h3>SlicerSPINEPS</h3><p data-i18n="e2p">Deep-learning whole-spine segmentation (nnU-Net / PyTorch) inside 3D Slicer, with a one-click CUDA installer that matches the user's NVIDIA driver. Submitted to the official Extensions Index.</p><a class="more" href="https://github.com/BerDom-Ing" target="_blank" rel="noopener">GitHub →</a></div>
+      <div class="card rv"><span class="k" data-i18n="e3k">Queen's University · hosted by Kitware</span><h3 data-i18n="e3h">Slicer telemetry platform</h3><p data-i18n="e3p">Privacy-first usage analytics for 3D Slicer: Qt extension, Flask backend on AWS and a D3.js / Crossfilter dashboard, now live at slicer-telemetry.kitware.com.</p><a class="more" href="https://slicer-telemetry.kitware.com" target="_blank" rel="noopener" data-i18n="e3a">Live dashboard →</a></div>
+      <div class="card rv"><span class="k" data-i18n="e4k">Own product · in daily use</span><h3 data-i18n="e4h">Rental finance app</h3><p data-i18n="e4p">One Python codebase shipped as an Android APK and as a web app running Python in the browser (Pyodide), on Cloudflare Pages with a Supabase / PostgreSQL backend and row-level security.</p></div>
     </div>
   </div>
 </section>
@@ -317,34 +395,41 @@
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <div class="sec-num">07 / TOOLBOX</div>
-        <h2>What I work with</h2>
+        <div class="sec-num" data-i18n="t_num">08 / TOOLBOX</div>
+        <h2 data-i18n="t_h">What I work with</h2>
       </div>
-      <p>Frontier models for generation, classic DCC and engines for control, and enough engineering to automate the whole chain.</p>
+      <p data-i18n="t_p">Frontier models for generation, classic DCC and engines for control, and enough engineering to automate the whole chain.</p>
     </div>
     <div class="tool-grid">
-      <div class="tool-col rv"><h4>Generative AI</h4><ul><li>Higgsfield (video, templates)</li><li>FLUX.2 klein · ComfyUI</li><li>AI image-to-3D</li><li>Qwen3-TTS (voice design, emotion)</li><li>faster-whisper</li><li>VGGT · YOLO11</li></ul></div>
-      <div class="tool-col rv"><h4>Agents &amp; automation</h4><ul><li>Claude Code (daily driver)</li><li>Custom skills &amp; MCP servers</li><li>Godot, ComfyUI &amp; Slicer via MCP</li><li>Python pipelines</li><li>ffmpeg</li><li>Headless batch rendering</li></ul></div>
-      <div class="tool-col rv"><h4>3D, engines &amp; XR</h4><ul><li>Godot 4 (GDScript, shaders)</li><li>Blender (Python, baking)</li><li>OpenXR · SteamVR · ALVR</li><li>COLMAP · photogrammetry</li><li>VTK · ITK · 3D Slicer</li><li>glTF · FBX · VRM · BVH</li></ul></div>
-      <div class="tool-col rv"><h4>Code &amp; platform</h4><ul><li>Python · JavaScript · SQL</li><li>GSAP · Canvas · SVG</li><li>PyTorch · CUDA</li><li>Supabase · AWS · Cloudflare</li><li>Qt · Flutter · Flet</li><li>Git · CMake · pytest</li></ul></div>
+      <div class="tool-col rv"><h4 data-i18n="t1">Generative AI</h4><ul><li data-i18n="t1a">Higgsfield (video, templates)</li><li data-i18n="t1b">Text- &amp; reference-to-video</li><li>FLUX.2 klein · ComfyUI</li><li>AI image-to-3D</li><li data-i18n="t1c">Qwen3-TTS (voice design, emotion)</li><li>faster-whisper · VGGT · YOLO11</li></ul></div>
+      <div class="tool-col rv"><h4 data-i18n="t2">Agents &amp; automation</h4><ul><li data-i18n="t2a">Claude Code (daily driver)</li><li data-i18n="t2b">Custom skills &amp; MCP servers</li><li data-i18n="t2c">Godot, ComfyUI &amp; Slicer via MCP</li><li data-i18n="t2d">Python pipelines</li><li>ffmpeg · Playwright</li><li data-i18n="t2e">Headless batch rendering</li></ul></div>
+      <div class="tool-col rv"><h4 data-i18n="t3">3D, engines &amp; XR</h4><ul><li data-i18n="t3a">Godot 4 (GDScript, shaders)</li><li data-i18n="t3b">Blender (Python, simulation, baking)</li><li>OpenXR · SteamVR · ALVR</li><li>COLMAP · photogrammetry</li><li>VTK · ITK · 3D Slicer</li><li>glTF · FBX · VRM · BVH</li></ul></div>
+      <div class="tool-col rv"><h4 data-i18n="t4">Code, web &amp; design</h4><ul><li>Python · JavaScript · SQL</li><li>HTML · CSS · <span data-i18n="t4a">HTML email</span></li><li>GSAP · Canvas · SVG</li><li>PyTorch · CUDA</li><li>Supabase · AWS · Cloudflare</li><li>Qt · Flutter · Git · pytest</li></ul></div>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
+<!-- EXPERIENCE / CV -->
 <section class="block" id="experience" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <div class="sec-num">08 / EXPERIENCE</div>
-        <h2>Path so far</h2>
+        <div class="sec-num" data-i18n="x9_num">09 / CV</div>
+        <h2 data-i18n="cv_h">Path so far</h2>
       </div>
-      <p>Systems Engineer (UTN, Argentina). Italian / EU citizen based in Como, Italy, and ready to relocate worldwide.</p>
+      <p data-i18n="cv_p">Systems Engineer (UTN, Argentina) who also makes the content. Italian / EU citizen based in Como, Italy, and ready to relocate worldwide.</p>
     </div>
-    <div class="timeline">
-      <div class="tl rv"><span class="when">2024 → now</span><div><h3>Freelance Software Engineer <small>· Medical imaging &amp; generative media</small></h3><p>Surgical planning &amp; navigation for a medical-device client (NDA). In parallel: generative content pipelines, AI 3D assets, the Godot game and the VR projects shown above.</p></div></div>
-      <div class="tl rv"><span class="when">Feb 2024 → Oct 2024</span><div><h3>Research Software Engineer <small>· Laboratory for Percutaneous Surgery, Queen's University</small></h3><p>End-to-end telemetry platform for 3D Slicer, now hosted by Kitware.</p></div></div>
-      <div class="tl rv"><span class="when">Before</span><div><h3>Products &amp; studies <small>· Argentina</small></h3><p>Built and sold a banking desktop app (PyQt5 / SQLite / printer protocols). Systems Engineering degree, plus a high-school diploma in Communications, Art &amp; Design.</p></div></div>
+    <div class="cv-grid">
+      <div class="timeline">
+        <div class="tl rv"><span class="when" data-i18n="cv1w">2024 → now</span><div><h3 data-i18n="cv1h">Freelance Software Engineer &amp; AI content creator <small>· Medical imaging &amp; generative media</small></h3><p data-i18n="cv1p">Surgical planning and navigation software for a medical-device client (NDA). In parallel, content and pipelines with generative AI: a brand campaign with its website, AI video, illustrated audiobooks, AI 3D assets for a game, and VR.</p></div></div>
+        <div class="tl rv"><span class="when" data-i18n="cv2w">Feb 2024 → Oct 2024</span><div><h3 data-i18n="cv2h">Research Software Engineer (intern) <small>· Laboratory for Percutaneous Surgery, Queen's University</small></h3><p data-i18n="cv2p">End-to-end telemetry platform for 3D Slicer, now hosted by Kitware. Remote, with weekly progress reviews and updates at the 3D Slicer developer meetings.</p></div></div>
+        <div class="tl rv"><span class="when" data-i18n="cv3w">Before</span><div><h3 data-i18n="cv3h">Products &amp; studies <small>· Argentina</small></h3><p data-i18n="cv3p">Built and sold a banking desktop app (PyQt5 / SQLite / printer protocols) while completing a Systems Engineering degree.</p></div></div>
+      </div>
+      <div class="cv-side">
+        <div class="note rv"><h4 data-i18n="cvs1">Education</h4><p data-i18n="cvs1a">Systems Engineer (Information Systems Engineering)<small>Universidad Tecnológica Nacional, Argentina</small></p><p data-i18n="cvs1b">Diploma in Communications, Art &amp; Design<small>Secondary school, Argentina</small></p></div>
+        <div class="note rv"><h4 data-i18n="cvs2">Languages</h4><p data-i18n="cvs2a">Spanish, native<small>English, advanced (Cambridge FCE) · Italian, improving</small></p></div>
+        <div class="note rv"><h4 data-i18n="cvs3">Where</h4><p data-i18n="cvs3a">Como, Italy · EU citizen<small>Remote, or relocating: London, Australia, across the EU and beyond</small></p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -352,16 +437,17 @@
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="wrap">
-    <span class="eyebrow">Let's talk</span>
-    <h2>Need someone to run<br>your <span class="grad-text">AI asset pipeline?</span></h2>
-    <p>I am looking for AI Technical Artist, generative pipeline and creative-technologist roles in games and realtime 3D. Remote, or relocating anywhere: London, Australia, across the EU and beyond.</p>
+    <span class="eyebrow" data-i18n="k_eb">Let's talk</span>
+    <h2 data-i18n="k_h">Need someone who builds it<br><span class="grad-text">and makes it?</span></h2>
+    <p data-i18n="k_p">I am looking for roles as AI Technical Artist, generative content or pipeline engineer, creative technologist, or software engineer, in media, games, realtime 3D and medical imaging. Remote, or relocating anywhere.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary" href="mailto:ber.dom.engineer@gmail.com">ber.dom.engineer@gmail.com</a>
-      <a class="btn btn-ghost" href="cv/Bernardo-Dominguez-CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+      <a class="btn btn-ghost" href="cv/Bernardo-Dominguez-CV.pdf" target="_blank" rel="noopener" data-i18n="cv_pdf">Download CV (PDF)</a>
     </div>
     <div class="links">
       <a href="https://www.linkedin.com/in/engineer-bernardo-dominguez/" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a href="https://github.com/BerDom-Ing" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="medical/" data-lhref="medical/?lang={l}" data-i18n="nav_med">Medical imaging ↗</a>
     </div>
   </div>
 </section>
@@ -370,12 +456,14 @@
 <footer>
   <div class="wrap">
     <span>© 2026 Bernardo Dominguez</span>
-    <span>All work shown is my own. Some environments use CC0 assets from Poly Haven, Kenney and Quaternius.</span>
+    <span data-i18n="foot">All work shown is my own. Campaign client details are placeholders. Some environments use CC0 assets from Poly Haven, Kenney and Quaternius.</span>
   </div>
 </footer>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Media viewer"><button class="x" aria-label="Close">×</button><div id="lbc"></div></div>
 
+<script src="assets/js/i18n-main.js"></script>
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
