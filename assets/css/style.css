@@ -368,3 +368,25 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
 .cv-side .note p { color: #d5d8de; font-size: 14.5px; }
 .cv-side .note p small { color: var(--muted); display: block; font-size: 13px; }
 .cv-side .note p + p { margin-top: 10px; }
+
+/* ---------- campaign: ads + newsletter ---------- */
+.camp-sub { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin: 64px 0 16px; }
+.camp-sub h3 { font-family: var(--ff-head); font-size: clamp(22px, 2.4vw, 28px); letter-spacing: -.02em; }
+.camp-sub span { color: var(--muted); font-size: 12.5px; font-family: var(--ff-mono); }
+.ads { display: grid; grid-template-columns: .85fr 1.4fr; gap: 14px; align-items: start; }
+.ads .media { border-color: var(--line-2); }
+.ads .ad-feed { aspect-ratio: 4/5; }
+.ads-r { display: grid; gap: 14px; }
+.ads-r .ad-link { aspect-ratio: 1200/628; }
+.ads-row { display: grid; grid-template-columns: 1fr 1.2fr; gap: 14px; align-items: start; }
+.ads-row .ad-sq { aspect-ratio: 1; }
+.ads-row .ad-mpu { aspect-ratio: 6/5; }
+.ads .ad-lead { grid-column: 1 / -1; aspect-ratio: 1456/180; }
+@media (max-width: 880px) { .ads { grid-template-columns: 1fr; } }
+.nl { display: grid; grid-template-columns: 1.5fr .62fr 1fr; gap: 18px; align-items: start; }
+.scrollshot { height: 620px; overflow-y: auto; border-radius: var(--radius); border: 1px solid var(--line-2); background: #EDE3D0; overscroll-behavior: contain; }
+.scrollshot img { width: 100%; height: auto; display: block; }
+.nl .note { display: flex; flex-direction: column; gap: 12px; }
+.nl .note .btn { align-self: flex-start; }
+@media (max-width: 980px) { .nl { grid-template-columns: 1fr .62fr; } .nl .note { grid-column: 1 / -1; } }
+@media (max-width: 560px) { .nl { grid-template-columns: 1fr; } .nl .scrollshot.d { display: none; } .scrollshot { height: 520px; } }
